@@ -1,6 +1,7 @@
 @import "../../styles/shared.scss";
 
 .header {
+  position: relative;
   max-width: $mobile;
   height: 100vh;
   margin-left: auto;

@@ -6,7 +6,7 @@ import ContactList from "../ContactList";
 const Header = () => {
   return (
     <header className={s.header}>
-      <Button style="reservation" name="Umów się na wizytę" />
+      <Button styles="reservation" name="Umów się na wizytę" />
       <SocialList />
       <ContactList />
     </header>

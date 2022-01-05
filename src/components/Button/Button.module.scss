@@ -26,8 +26,12 @@
 }
 
 .reservation {
+  position: absolute;
   background-color: $accent;
   color: #ffffff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-75%, -50%);
 }
 
 .style {
