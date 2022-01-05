@@ -1,0 +1,35 @@
+@import "../../styles/shared.scss";
+
+.button {
+  display: inline-block;
+  padding: 12px 30px;
+
+  border: none;
+
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 2px;
+
+  transition: background-color 0.1s ease;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($accent, 5%);
+  }
+
+  &:active {
+    background-color: darken($accent, 5%);
+  }
+}
+
+.reservation {
+  background-color: $accent;
+  color: #ffffff;
+}
+
+.style {
+  background-color: teal;
+}

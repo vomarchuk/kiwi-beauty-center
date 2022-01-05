@@ -1,0 +1,30 @@
+@import "../../styles/shared.scss";
+
+.header {
+  max-width: $mobile;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../../images/top-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
+  }
+
+  @media screen and (min-width: $desktopL) {
+    max-width: $desktopL;
+  }
+
+  @media screen and (min-width: $desktop4k) {
+    max-width: $desktop4k;
+  }
+}
