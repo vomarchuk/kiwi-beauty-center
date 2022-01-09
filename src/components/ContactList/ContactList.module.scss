@@ -1,20 +1,54 @@
 @import "../../styles/shared.scss";
 
+//mobile
 .contact {
   position: absolute;
   bottom: 0;
   left: 50%;
+  padding-top: 5px;
+  padding-bottom: 5px;
   transform: translate(-50%);
-  text-align: center;
   width: $mobile;
   background-color: rgba(#151515, 0.15);
-
+  color: $accentColor;
   border-top: rgba(#fff, 0.15) 1px solid;
 
   &__address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
   }
 
   &__phone {
-    color: currentColor;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  &__phone > a {
+    display: flex;
+    align-items: center;
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
+
+    &:hover {
+      color: lighten($accentColor, 35%);
+    }
+  }
+
+  &__workTime {
+    display: flex;
+    justify-content: space-around;
+    cursor: default;
+
+    .workTime__item {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__icon {
+    margin-right: 5px;
   }
 }

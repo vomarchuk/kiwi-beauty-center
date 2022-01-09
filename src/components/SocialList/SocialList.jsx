@@ -1,5 +1,4 @@
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-
 import s from "./SocialList.module.scss";
 
 const SocialList = () => {
