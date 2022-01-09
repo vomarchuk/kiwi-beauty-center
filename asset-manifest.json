@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/kiwi-beauty-center/static/css/main.ac7eec1c.css",
+    "main.js": "/kiwi-beauty-center/static/js/main.ab8a0d77.js",
+    "static/media/top-bg.jpg": "/kiwi-beauty-center/static/media/top-bg.446686520966d9cf4758.jpg",
+    "index.html": "/kiwi-beauty-center/index.html",
+    "main.ac7eec1c.css.map": "/kiwi-beauty-center/static/css/main.ac7eec1c.css.map",
+    "main.ab8a0d77.js.map": "/kiwi-beauty-center/static/js/main.ab8a0d77.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ac7eec1c.css",
+    "static/js/main.ab8a0d77.js"
+  ]
+}
