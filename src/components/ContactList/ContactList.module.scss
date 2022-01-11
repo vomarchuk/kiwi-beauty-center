@@ -2,13 +2,13 @@
 
 //mobile
 .contact {
+  @extend %container;
+  width: 100%;
   position: absolute;
   bottom: 0;
-  left: 50%;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  transform: translate(-50%);
-  width: $mobile;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
   background-color: rgba(#151515, 0.15);
   color: $accentColor;
   border-top: rgba(#fff, 0.15) 1px solid;

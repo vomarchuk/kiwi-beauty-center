@@ -1,12 +1,12 @@
 import s from "./NavList.module.scss";
 const NavList = () => {
   return (
-    <ul>
-      <li>menu</li>
-      <li>menu</li>
-      <li>menu</li>
-      <li>menu</li>
-      <li>menu</li>
+    <ul className={s["nav__list"]}>
+      <li className={s["nav__item"]}>menu</li>
+      <li className={s["nav__item"]}>menu</li>
+      <li className={s["nav__item"]}>menu</li>
+      <li className={s["nav__item"]}>menu</li>
+      <li className={s["nav__item"]}>menu</li>
     </ul>
   );
 };
