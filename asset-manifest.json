@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/kiwi-beauty-center/static/css/main.4525e7dd.css",
-    "main.js": "/kiwi-beauty-center/static/js/main.ec212705.js",
+    "main.css": "/kiwi-beauty-center/static/css/main.bfe92b07.css",
+    "main.js": "/kiwi-beauty-center/static/js/main.14bd10a1.js",
     "static/media/top-bg.jpg": "/kiwi-beauty-center/static/media/top-bg.446686520966d9cf4758.jpg",
     "index.html": "/kiwi-beauty-center/index.html",
-    "main.4525e7dd.css.map": "/kiwi-beauty-center/static/css/main.4525e7dd.css.map",
-    "main.ec212705.js.map": "/kiwi-beauty-center/static/js/main.ec212705.js.map"
+    "main.bfe92b07.css.map": "/kiwi-beauty-center/static/css/main.bfe92b07.css.map",
+    "main.14bd10a1.js.map": "/kiwi-beauty-center/static/js/main.14bd10a1.js.map"
   },
   "entrypoints": [
-    "static/css/main.4525e7dd.css",
-    "static/js/main.ec212705.js"
+    "static/css/main.bfe92b07.css",
+    "static/js/main.14bd10a1.js"
   ]
 }
