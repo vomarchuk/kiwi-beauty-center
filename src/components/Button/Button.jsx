@@ -1,7 +1,7 @@
 import s from "./Button.module.scss";
-const Button = ({ name, style }) => {
+const Button = ({ name, styles }) => {
   return (
-    <button className={` ${s.button} ` + s[style]} type="button">
+    <button className={` ${s.button} ` + s[styles]} type="button">
       {name}
     </button>
   );

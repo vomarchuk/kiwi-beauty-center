@@ -11,9 +11,9 @@ body {
   // font-family: Roboto;
   line-height: 1.5;
   font-size: 16px;
-  background-color: #fff;
   color: $textColor;
   min-height: 100vh;
+  margin: 0;
 }
 
 img {
@@ -24,6 +24,7 @@ img {
 
 a {
   text-decoration: none;
+  color: currentColor;
 }
 
 ul {

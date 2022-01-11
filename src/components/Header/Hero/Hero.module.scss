@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:700");
+@import "../../../styles/shared.scss";
+
+@keyframes showTopText {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(0, 50%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes showBottomText {
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animatedTitle {
+  color: #fff;
+  font-family: Roboto, Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  position: absolute;
+  top: 5%;
+  width: 320px;
+  line-height: 37px;
+}
+
+.animatedTitle > div {
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.animatedTitle > div div {
+  font-size: 30px;
+  margin-top: 7px;
+  position: absolute;
+}
+
+.animatedTitle > div div span {
+  font-size: 25px;
+  line-height: 30px;
+
+  display: block;
+  text-align: center;
+  color: #767676;
+}
+
+.animatedTitle > div.textTop {
+  width: 40%;
+  // border-bottom: 2px solid $accentColor;
+}
+
+.animatedTitle > div.textTop div {
+  animation: showTopText 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translate(0, 100%);
+}
+
+.animatedTitle > div.textBottom {
+  left: 50%;
+  text-align: center;
+  color: $accentColor;
+  bottom: 0;
+}
+
+.animatedTitle > div.textBottom div {
+  animation: showBottomText 0.5s;
+  animation-delay: 1.75s;
+  animation-fill-mode: forwards;
+  top: 0;
+  transform: translate(0, -100%);
+}

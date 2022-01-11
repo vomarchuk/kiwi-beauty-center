@@ -13,21 +13,27 @@
   border-radius: 2px;
 
   transition: background-color 0.1s ease;
-
+  transition-timing-function: ease;
+  transition-duration: 0.5s;
   cursor: pointer;
 
   &:hover {
-    background-color: lighten($accent, 5%);
+    background-color: lighten($accentColor, 35%);
+    color: $accentColor;
   }
 
   &:active {
-    background-color: darken($accent, 5%);
+    background-color: darken($accentColor, 5%);
   }
 }
 
 .reservation {
-  background-color: $accent;
+  position: absolute;
+  background-color: $accentColor;
   color: #ffffff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .style {
