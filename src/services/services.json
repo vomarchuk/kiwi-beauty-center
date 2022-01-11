@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "serviceName": "Manicure"
+  },
+
+  {
+    "id": 2,
+    "serviceName": "Pedicure"
+  },
+
+  {
+    "id": 3,
+    "serviceName": "Depilacja"
+  },
+
+  {
+    "id": 4,
+    "serviceName": "Depilacja laserowa"
+  },
+
+  {
+    "id": 5,
+    "serviceName": "Henna Brwi Rzęsy"
+  },
+
+  {
+    "id": 6,
+    "serviceName": "Laminacja / Lifting"
+  },
+  {
+    "id": 7,
+    "serviceName": "Zabiegi na twarz"
+  },
+  {
+    "id": 8,
+    "serviceName": "Inne usługi"
+  },
+
+  {
+    "id": 9,
+    "serviceName": "Nowości"
+  },
+
+  {
+    "id": 10,
+    "serviceName": "O nas"
+  },
+
+  {
+    "id": 11,
+    "serviceName": "Kontakt"
+  }
+]

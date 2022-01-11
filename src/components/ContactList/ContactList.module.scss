@@ -39,12 +39,16 @@
 
   &__workTime {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     cursor: default;
 
     .workTime__item {
       display: flex;
       align-items: center;
+
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
     }
   }
 
