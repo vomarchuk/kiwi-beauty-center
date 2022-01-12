@@ -1,0 +1,28 @@
+@import "../../../styles/shared.scss";
+
+.swiper {
+  min-width: $mobile;
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
+
+  @media screen and (min-width: $desktopL) {
+    width: $desktopL;
+  }
+
+  @media screen and (min-width: $desktop4k) {
+    width: $desktop4k;
+  }
+}
+
+.swiperSlide {
+  &__container {
+    padding-top: 20px;
+    text-align: center;
+  }
+}

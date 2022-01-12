@@ -1,10 +1,11 @@
+import CarouselService from "./CarouselService";
 import s from "./Main.module.scss";
+
 const Main = () => {
   return (
     <main className={s.main}>
       <section className={s.services}>
-        <h2>The first</h2>
-        <p>Services list and price TOP categories</p>
+        <CarouselService />
       </section>
       <section className={s.salon}>
         <h2>The second</h2>
