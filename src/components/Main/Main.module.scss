@@ -6,18 +6,18 @@
   margin-right: auto;
 
   @media screen and (min-width: $tablet) {
-    max-width: $tablet;
+    width: $tablet;
   }
 
   @media screen and (min-width: $desktop) {
-    max-width: $desktop;
+    width: $desktop;
   }
 
   @media screen and (min-width: $desktopL) {
-    max-width: $desktopL;
+    width: $desktopL;
   }
 
   @media screen and (min-width: $desktop4k) {
-    max-width: $desktop4k;
+    width: $desktop4k;
   }
 }

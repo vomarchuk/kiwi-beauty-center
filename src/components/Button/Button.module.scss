@@ -16,6 +16,15 @@
   transition-timing-function: ease;
   transition-duration: 0.5s;
   cursor: pointer;
+}
+
+.reservation {
+  position: absolute;
+  background-color: $accentColor;
+  color: #ffffff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 
   &:hover {
     background-color: lighten($accentColor, 35%);
@@ -27,15 +36,16 @@
   }
 }
 
-.reservation {
-  position: absolute;
-  background-color: $accentColor;
-  color: #ffffff;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
+.more--service {
+  margin-top: 20px;
+  color: #444444;
+  background-color: #fff;
 
-.style {
-  background-color: teal;
+  &:hover {
+    background-color: lighten($accentColor, 35%);
+  }
+
+  &:active {
+    background-color: darken($accentColor, 5%);
+  }
 }

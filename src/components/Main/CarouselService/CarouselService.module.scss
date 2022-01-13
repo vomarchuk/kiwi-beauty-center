@@ -2,6 +2,80 @@
 
 .swiper {
   min-width: $mobile;
+  height: 100vh;
+
+  .swiperSlide {
+    display: flex;
+    flex-direction: column;
+
+    color: #fff;
+
+    &:nth-child(2n) {
+      flex-direction: column-reverse;
+    }
+
+    &__description {
+      padding-top: 20px;
+      text-align: center;
+      height: 50%;
+      background-color: #66c7cd;
+    }
+
+    &__title {
+      margin-top: 10px;
+      text-transform: uppercase;
+    }
+
+    &__list {
+      margin-top: 20px;
+    }
+
+    &__item {
+      padding: 5px 0;
+      margin-left: 15px;
+      margin-right: 15px;
+
+      font-size: 14px;
+
+      &:not(:first-child) {
+        border-top: rgba(#fff, 0.1) 1px solid;
+      }
+    }
+
+    &__price {
+      color: #4a4a4a;
+      font-weight: bold;
+      margin-left: 5px;
+    }
+
+    &__img {
+      height: 50%;
+      background-color: black;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &__img--manicure {
+      background-image: url("../../../images/ServicesImg/manicure.png");
+    }
+
+    &__img--pedicure {
+      background-image: url("../../../images/ServicesImg/pedicure.jpg");
+    }
+
+    &__img--depilacja {
+      background-image: url("../../../images/ServicesImg/depilacja.jpg");
+    }
+
+    &__img--laser {
+      background-image: url("../../../images/ServicesImg/laser.jpeg");
+    }
+
+    &__img--zabiegi_Na_Twarz {
+      background-image: url("../../../images/ServicesImg/zabiegi-na-twarz.jpg");
+    }
+  }
 
   @media screen and (min-width: $tablet) {
     width: $tablet;
@@ -17,12 +91,5 @@
 
   @media screen and (min-width: $desktop4k) {
     width: $desktop4k;
-  }
-}
-
-.swiperSlide {
-  &__container {
-    padding-top: 20px;
-    text-align: center;
   }
 }

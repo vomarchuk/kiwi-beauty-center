@@ -11,7 +11,7 @@ const Header = () => {
       <Logo className={s["header__logo"]} />
       <NavBar />
       <Hero />
-      <Button styles="reservation" name="Umów się na wizytę" />
+      <Button variant="reservation" name="Umów się na wizytę" />
       <SocialList />
       <ContactList />
     </header>

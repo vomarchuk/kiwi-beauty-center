@@ -1,14 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import "swiper/scss";
+import "swiper/scss/pagination";
+import "swiper/scss/navigation";
 
 import SwiperCore, { Pagination, Navigation } from "swiper";
 import s from "./CarouselService.module.scss";
 import Logo from "../../Logo";
-import ImgManicure from "../../../images/ServicesImg/manicure.png";
-import ImgPedicure from "../../../images/ServicesImg/pedicure.jpg";
-import ImgDepilacja from "../../../images/ServicesImg/depilacja.jpg";
+import Button from "../../Button";
 
 import { BREAKPOINTS } from "../../../Constants";
 
@@ -22,7 +20,6 @@ const CarouselService = () => {
       <Swiper
         slidesPerView={3}
         className={s.swiper}
-        onSlideChange={() => console.log("slide change")}
         loop={true}
         loopFillGroupWithBlank={true}
         navigation={true}
@@ -41,63 +38,144 @@ const CarouselService = () => {
         }}
       >
         <SwiperSlide className={s["swiperSlide"]}>
-          <div className={s["swiperSlide__container"]}>
+          <div className={s["swiperSlide__description"]}>
             <Logo variant="black" styles="swiperSlide" />
 
             <h2 className={s["swiperSlide__title"]}>Manicure</h2>
+
             <ul className={s["swiperSlide__list"]}>
-              <li>services 1</li> <li>services 2</li> <li>services 3</li>
+              <li className={s["swiperSlide__item"]}>
+                Manicure hybrydowy z bazą proteinową -
+                <span className={s["swiperSlide__price"]}>130 płn</span>
+              </li>
+              <li className={s["swiperSlide__item"]}>
+                Manicure klasyczny -
+                <span className={s["swiperSlide__price"]}>60 płn</span>
+              </li>
+              <li className={s["swiperSlide__item"]}>
+                Manicure hybrydowy French -
+                <span className={s["swiperSlide__price"]}>140 płn</span>
+              </li>
             </ul>
-            <button>więcej usług</button>
+            <Button name="więcej usług" variant="more--service" />
           </div>
-          <div>
-            <img
-              className={s["swiperSlide__img"]}
-              src={ImgManicure}
-              alt="manicure service"
-            />
-          </div>
+
+          <div
+            className={`${s["swiperSlide__img"]} ${s["swiperSlide__img--manicure"]}`}
+          ></div>
         </SwiperSlide>
+
         <SwiperSlide className={s["swiperSlide"]}>
-          <div className={s["swiperSlide__container"]}>
+          <div className={s["swiperSlide__description"]}>
             <Logo variant="black" styles="swiperSlide" />
 
             <h2 className={s["swiperSlide__title"]}>Pedicure</h2>
+
             <ul className={s["swiperSlide__list"]}>
-              <li>services 1</li> <li>services 2</li> <li>services 3</li>
+              <li className={s["swiperSlide__item"]}>
+                Pedicure hybrydowy -
+                <span className={s["swiperSlide__price"]}>160 płn</span>
+              </li>
+              <li className={s["swiperSlide__item"]}>
+                Pedicure Vinylux -
+                <span className={s["swiperSlide__price"]}>140 płn</span>
+              </li>
+              <li className={s["swiperSlide__item"]}>
+                Pedicure klasyczny -
+                <span className={s["swiperSlide__price"]}>130 płn</span>
+              </li>
             </ul>
-            <button>więcej usług</button>
-            <div>
-              <img src={ImgPedicure} alt="pedicure service" />
-            </div>
+            <Button name="więcej usług" variant="more--service" />
           </div>
+
+          <div
+            className={`${s["swiperSlide__img"]} ${s["swiperSlide__img--pedicure"]}`}
+          ></div>
         </SwiperSlide>
 
         <SwiperSlide className={s["swiperSlide"]}>
-          <div className={s["swiperSlide__container"]}>
+          <div className={s["swiperSlide__description"]}>
             <Logo variant="black" styles="swiperSlide" />
 
-            <h2 className={s["swiperSlide__title"]}>Depilacja</h2>
+            <h2 className={s["swiperSlide__title"]}>
+              Depilacja woskiem miękkim
+            </h2>
+
             <ul className={s["swiperSlide__list"]}>
-              <li>services 1</li> <li>services 2</li> <li>services 3</li>
+              <li className={s["swiperSlide__item"]}>
+                Bikini brazylijskie -
+                <span className={s["swiperSlide__price"]}>100 płn</span>
+              </li>
+              <li className={s["swiperSlide__item"]}>
+                Całe nogi -
+                <span className={s["swiperSlide__price"]}>100 płn</span>
+              </li>
+              <li className={s["swiperSlide__item"]}>
+                Brwi / wąsik / policzki / broda -
+                <span className={s["swiperSlide__price"]}>40 płn</span>
+              </li>
             </ul>
-            <button>więcej usług</button>
-            <div>
-              <img src={ImgDepilacja} alt="depilacja service" />
-            </div>
+            <Button name="więcej usług" variant="more--service" />
           </div>
+
+          <div
+            className={`${s["swiperSlide__img"]} ${s["swiperSlide__img--depilacja"]}`}
+          ></div>
         </SwiperSlide>
+
         <SwiperSlide className={s["swiperSlide"]}>
-          <div className={s["swiperSlide__container"]}>
+          <div className={s["swiperSlide__description"]}>
             <Logo variant="black" styles="swiperSlide" />
 
-            <h2 className={s["swiperSlide__title"]}>Depilacja Laserowa</h2>
+            <h2 className={s["swiperSlide__title"]}>Laser</h2>
+
             <ul className={s["swiperSlide__list"]}>
-              <li>services 1</li> <li>services 2</li> <li>services 3</li>
+              <li className={s["swiperSlide__item"]}>
+                Bikini brazylijskie -
+                <span className={s["swiperSlide__price"]}>349 płn</span>
+              </li>
+              <li className={s["swiperSlide__item"]}>
+                Łydki + pachy -
+                <span className={s["swiperSlide__price"]}>499 płn</span>
+              </li>
+              <li className={s["swiperSlide__item"]}>
+                Pachy -<span className={s["swiperSlide__price"]}>199 płn</span>
+              </li>
             </ul>
-            <button>więcej usług</button>
+            <Button name="więcej usług" variant="more--service" />
           </div>
-          <div></div>
+
+          <div
+            className={`${s["swiperSlide__img"]} ${s["swiperSlide__img--laser"]}`}
+          ></div>
+        </SwiperSlide>
+
+        <SwiperSlide className={s["swiperSlide"]}>
+          <div className={s["swiperSlide__description"]}>
+            <Logo variant="black" styles="swiperSlide" />
+
+            <h2 className={s["swiperSlide__title"]}>Zabiegi na twarz</h2>
+
+            <ul className={s["swiperSlide__list"]}>
+              <li className={s["swiperSlide__item"]}>
+                Oczyszczanie manualne z maską Algową -
+                <span className={s["swiperSlide__price"]}>220 płn</span>
+              </li>
+              <li className={s["swiperSlide__item"]}>
+                Oczyszczanie Wodorowe 6 etapów -
+                <span className={s["swiperSlide__price"]}>250 płn</span>
+              </li>
+              <li className={s["swiperSlide__item"]}>
+                PRX-T33 + mezoterapia mikroigłowa -
+                <span className={s["swiperSlide__price"]}>550 płn</span>
+              </li>
+            </ul>
+            <Button name="więcej usług" variant="more--service" />
+          </div>
+
+          <div
+            className={`${s["swiperSlide__img"]} ${s["swiperSlide__img--zabiegi_Na_Twarz"]}`}
+          ></div>
         </SwiperSlide>
       </Swiper>
     </>
