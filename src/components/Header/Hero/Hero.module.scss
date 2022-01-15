@@ -6,7 +6,6 @@
     transform: translate3d(0, 100%, 0);
   }
 
-  40%,
   60% {
     transform: translate3d(0, 50%, 0);
   }
@@ -34,7 +33,8 @@
   height: 200px;
   position: absolute;
   top: 5%;
-  width: 320px;
+  width: $mobile;
+  width: 100%;
   line-height: 37px;
 }
 
@@ -90,4 +90,28 @@
   animation-fill-mode: forwards;
   top: 0;
   transform: translate(0, -100%);
+}
+
+@media screen and (min-width: $tablet) {
+  .animatedTitle {
+    max-width: $tablet;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .animatedTitle {
+    max-width: $desktop;
+  }
+}
+
+@media screen and (min-width: $desktopL) {
+  .animatedTitle {
+    max-width: $desktopL;
+  }
+}
+
+@media screen and (min-width: $desktop4k) {
+  .animatedTitle {
+    max-width: $desktop4k;
+  }
 }

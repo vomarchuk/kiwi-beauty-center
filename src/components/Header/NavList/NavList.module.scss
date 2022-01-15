@@ -1,6 +1,49 @@
-.nav__list {
-  width: 100px;
-  color: tomato;
+@import "../../../styles/shared.scss";
+
+.nav {
+  width: 220px;
+  text-align: center;
+  color: $accentColor;
   height: 100vh;
-  background-color: aqua;
+  background-color: rgba(0, 0, 0, 0.863);
+  border-left: rgba(#fff, 0.1) 1px solid;
+  color: #fff;
+  font-size: 17px;
+
+  &__logo {
+    margin-top: 25px;
+    width: 100px;
+    height: auto;
+  }
+
+  &__list {
+    margin-top: 25px;
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  &__item:not(:first-child) {
+    margin-top: 10px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
+
+    &:hover {
+      color: $accentColor;
+    }
+
+    &:active {
+      color: darken($accentColor, 15%);
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    margin-right: 10px;
+  }
 }

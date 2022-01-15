@@ -1,0 +1,23 @@
+@import "../../styles/shared.scss";
+
+.main {
+  color: #000000;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
+
+  @media screen and (min-width: $desktopL) {
+    width: $desktopL;
+  }
+
+  @media screen and (min-width: $desktop4k) {
+    width: $desktop4k;
+  }
+}
