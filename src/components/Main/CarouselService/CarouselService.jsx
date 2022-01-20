@@ -5,6 +5,7 @@ import "swiper/scss/navigation";
 
 import SwiperCore, { Pagination, Navigation } from "swiper";
 import s from "./CarouselService.module.scss";
+import { COLORS } from "../../../Constants";
 import Logo from "../../Logo";
 import Button from "../../Button";
 
@@ -18,6 +19,10 @@ const CarouselService = () => {
   return (
     <>
       <Swiper
+        style={{
+          "--swiper-navigation-color": `${COLORS.dark}`,
+          "--swiper-pagination-color": "#fff",
+        }}
         slidesPerView={3}
         className={s.swiper}
         loop={true}

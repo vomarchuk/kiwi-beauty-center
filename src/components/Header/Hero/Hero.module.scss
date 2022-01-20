@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:700");
+// @import url("https://fonts.googleapis.com/css?family=Roboto:700");
 @import "../../../styles/shared.scss";
 
 @keyframes showTopText {
@@ -27,7 +27,7 @@
 
 .animatedTitle {
   color: #fff;
-  font-family: Roboto, Arial, sans-serif;
+  // font-family: Roboto, Arial, sans-serif;
   display: flex;
   justify-content: center;
   height: 200px;
@@ -66,7 +66,6 @@
 
 .animatedTitle > div.textTop {
   width: 40%;
-  // border-bottom: 2px solid $accentColor;
 }
 
 .animatedTitle > div.textTop div {
