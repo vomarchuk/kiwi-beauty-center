@@ -1,6 +1,7 @@
 import Container from "../Container";
 import CarouselService from "./CarouselService";
 import AboutUs from "./AboutUs";
+import Reviews from "./Reviews";
 
 import s from "./Main.module.scss";
 
@@ -15,8 +16,10 @@ const Main = () => {
           <AboutUs />
         </Container>
       </section>
-      <section className={s.comments}>
-        <h2>the third</h2> <p>Comments from our clients</p>
+      <section className={s.reviews}>
+        <Container>
+          <Reviews />
+        </Container>
       </section>
     </main>
   );

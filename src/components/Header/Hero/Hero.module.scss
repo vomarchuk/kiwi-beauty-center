@@ -79,7 +79,7 @@
 .animatedTitle > div.textBottom {
   left: 50%;
   text-align: center;
-  color: $accentColor;
+  @extend %accent__word;
   bottom: 0;
 }
 

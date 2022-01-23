@@ -1,0 +1,9 @@
+@import "../../../styles/shared.scss";
+
+.title {
+  @extend %title;
+}
+
+.accent {
+  @extend %accent__word;
+}

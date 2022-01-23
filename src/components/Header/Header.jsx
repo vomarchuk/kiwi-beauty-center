@@ -5,6 +5,7 @@ import SocialList from "../SocialList";
 import ContactList from "../ContactList";
 import NavBar from "./NavBar";
 import Hero from "./Hero";
+
 const Header = () => {
   return (
     <header className={s.header}>

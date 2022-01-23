@@ -1,0 +1,25 @@
+%container {
+  width: $mobile;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+%title {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 800;
+
+  color: $textColor;
+}
+
+%text {
+  font-size: 14px;
+  line-height: 24px;
+  color: $textColor;
+}
+
+%accent__word {
+  color: $accentColor;
+}
