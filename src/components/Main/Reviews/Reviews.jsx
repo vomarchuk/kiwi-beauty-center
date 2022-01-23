@@ -1,3 +1,5 @@
+import { useGetReviewsQuery } from "../../../redux";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/scss";
 import "swiper/scss/pagination";
@@ -9,6 +11,10 @@ import s from "./Reviews.module.scss";
 SwiperCore.use([Pagination, Navigation]);
 
 const Reviews = () => {
+  const { data = [], isLoading } = useGetReviewsQuery();
+
+  if (isLoading) return <h2>Loading...</h2>;
+
   return (
     <div>
       <h2 className={s.title}>
@@ -20,39 +26,18 @@ const Reviews = () => {
         navigation={true}
         className={s.swiper}
       >
-        <SwiperSlide>
-          <h3 className={s.name}>Veronika</h3>
-          <p className={s.date}>10.12.20</p>
-          <p>STARS</p>
-          <p className={s.comment}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum,
-            hic! Laudantium eum quam commodi sint qui dolore, quos dignissimos
-            vel assumenda ex rem dolorum reiciendis magnam illum praesentium.
-            Blanditiis, ex!
-          </p>
-        </SwiperSlide>
-        <SwiperSlide>
-          <h3 className={s.name}>Natalia</h3>
-          <p className={s.date}>10.12.20</p>
-          <p>STARS</p>
-          <p className={s.comment}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum,
-            hic! Laudantium eum quam commodi sint qui dolore, quos dignissimos
-            vel assumenda ex rem dolorum reiciendis magnam illum praesentium.
-            Blanditiis, ex!
-          </p>
-        </SwiperSlide>
-        <SwiperSlide>
-          <h3 className={s.name}>Anna</h3>
-          <p className={s.date}>10.12.20</p>
-          <p>STARS</p>
-          <p className={s.comment}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum,
-            hic! Laudantium eum quam commodi sint qui dolore, quos dignissimos
-            vel assumenda ex rem dolorum reiciendis magnam illum praesentium.
-            Blanditiis, ex!
-          </p>
-        </SwiperSlide>
+        {data?.data.map(
+          ({ author_name, profile_photo_url, rating, text, time }) => {
+            return (
+              <SwiperSlide key={time}>
+                <h3 className={s.name}>{author_name}</h3>
+                {/* <p className={s.date}>{time}</p> */}
+                <p>{rating}</p>
+                <p className={s.comment}>{text}</p>
+              </SwiperSlide>
+            );
+          }
+        )}
       </Swiper>
     </div>
   );
