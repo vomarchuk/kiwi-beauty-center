@@ -3,10 +3,12 @@ import { AiOutlineClockCircle } from "react-icons/ai";
 import { FiNavigation } from "react-icons/fi";
 import s from "./ContactList.module.scss";
 
-const ContactList = () => {
+const ContactList = ({ styles }) => {
   return (
     <>
-      <address className={s.contact}>
+      <address
+        className={`${s.contact}  ${styles && s[`contact--${styles}`]} `}
+      >
         <p className={s.contact__address}>
           <FiNavigation className={s.contact__icon} />
           Floriańska 6/u7, Warszawa

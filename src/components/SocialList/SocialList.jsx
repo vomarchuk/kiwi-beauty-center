@@ -1,9 +1,9 @@
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import s from "./SocialList.module.scss";
 
-const SocialList = () => {
+const SocialList = ({ styles }) => {
   return (
-    <ul className={s.social}>
+    <ul className={`${s.social}  ${styles && s[`social--${styles}`]} `}>
       <li className={s.social__item}>
         <a
           className={s.social__link}

@@ -4,14 +4,10 @@
 .contact {
   @extend %container;
   width: 100%;
-  position: absolute;
-  bottom: 0;
   padding-top: 15px;
   padding-bottom: 15px;
 
-  background-color: rgba(#151515, 0.15);
   color: $accentColor;
-  border-top: rgba(#fff, 0.15) 1px solid;
 
   &__address {
     display: flex;
@@ -38,8 +34,6 @@
   }
 
   &__workTime {
-    display: flex;
-    justify-content: center;
     cursor: default;
 
     .workTime__item {
@@ -54,5 +48,18 @@
 
   &__icon {
     margin-right: 5px;
+  }
+}
+
+.contact--header {
+  position: absolute;
+  bottom: 0;
+
+  background-color: rgba(#151515, 0.15);
+  border-top: rgba(#fff, 0.15) 1px solid;
+
+  .contact__workTime {
+    display: flex;
+    justify-content: center;
   }
 }

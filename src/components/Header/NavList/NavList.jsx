@@ -1,12 +1,12 @@
 import s from "./NavList.module.scss";
-import { ReactComponent as Img } from "../../../images/logo.svg";
 import { IoDiamondOutline } from "react-icons/io5";
 import services from "../../../services/services.json";
+import Logo from "../../Logo";
 
 const NavList = () => {
   return (
     <div className={s.nav}>
-      <Img className={s["nav__logo"]} />
+      <Logo styles="nav" />
       <ul className={s["nav__list"]}>
         {services.map(({ id, serviceName }) => {
           return (

@@ -1,11 +1,6 @@
 @import "../../styles/shared.scss";
 
 .social {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  right: 0;
   height: 100%;
   padding: 0 13px;
   border-left: rgba(#fff, 0.1) 1px solid;
@@ -40,4 +35,15 @@
   display: block;
   width: 28px;
   height: 28px;
+}
+
+.social--header {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  right: 0;
+}
+
+.social--footer {
 }
