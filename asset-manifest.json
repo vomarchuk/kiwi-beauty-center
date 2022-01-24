@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/kiwi-beauty-center/static/css/main.e0a02da7.css",
-    "main.js": "/kiwi-beauty-center/static/js/main.ce0eb0ca.js",
+    "main.css": "/kiwi-beauty-center/static/css/main.555cc35c.css",
+    "main.js": "/kiwi-beauty-center/static/js/main.6d2e95d4.js",
     "static/media/logo.svg": "/kiwi-beauty-center/static/media/logo.2e99029a81acc50db0cb7c28ca0fc362.svg",
     "static/media/pedicure.jpg": "/kiwi-beauty-center/static/media/pedicure.7340a338285b0be79164.jpg",
     "static/media/depilacja.jpg": "/kiwi-beauty-center/static/media/depilacja.0461add678abede66c6b.jpg",
     "static/media/laser.jpeg": "/kiwi-beauty-center/static/media/laser.31a70c1c82c33c7eed9d.jpeg",
     "static/media/foto-18.jpg": "/kiwi-beauty-center/static/media/foto-18.75b66866e82e6ca74806.jpg",
+    "static/media/bg-reviews.jpg": "/kiwi-beauty-center/static/media/bg-reviews.e7ca0cfe783e90fb5a11.jpg",
     "static/media/manicure.png": "/kiwi-beauty-center/static/media/manicure.fdbf13d5af742ea2d60d.png",
     "static/media/zabiegi-na-twarz.jpg": "/kiwi-beauty-center/static/media/zabiegi-na-twarz.c18a5658a05436240d62.jpg",
     "static/media/top-bg.jpg": "/kiwi-beauty-center/static/media/top-bg.446686520966d9cf4758.jpg",
     "static/media/logo-black.svg": "/kiwi-beauty-center/static/media/logo-black.133c979b3b3f3a83c9399cba97a3d39a.svg",
     "index.html": "/kiwi-beauty-center/index.html",
-    "main.e0a02da7.css.map": "/kiwi-beauty-center/static/css/main.e0a02da7.css.map",
-    "main.ce0eb0ca.js.map": "/kiwi-beauty-center/static/js/main.ce0eb0ca.js.map"
+    "main.555cc35c.css.map": "/kiwi-beauty-center/static/css/main.555cc35c.css.map",
+    "main.6d2e95d4.js.map": "/kiwi-beauty-center/static/js/main.6d2e95d4.js.map"
   },
   "entrypoints": [
-    "static/css/main.e0a02da7.css",
-    "static/js/main.ce0eb0ca.js"
+    "static/css/main.555cc35c.css",
+    "static/js/main.6d2e95d4.js"
   ]
 }
