@@ -2,8 +2,29 @@
 
 .title {
   @extend %title;
+  position: relative;
 }
 
 .accent {
   @extend %accent__word;
+}
+
+.review {
+  margin-top: 20px;
+}
+
+.review__name {
+  font-style: italic;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.review__stars {
+  display: flex;
+  justify-content: center;
+}
+
+.review__comment {
+  margin-top: 20px;
+  margin-bottom: 50px;
 }

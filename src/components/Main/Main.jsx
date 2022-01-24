@@ -16,7 +16,7 @@ const Main = () => {
           <AboutUs />
         </Container>
       </section>
-      <section className={s.reviews}>
+      <section className={`${s.reviews}  ${s.reviewsOverlay} `}>
         <Container>
           <Reviews />
         </Container>

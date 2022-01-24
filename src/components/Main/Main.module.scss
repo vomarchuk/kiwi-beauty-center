@@ -23,6 +23,28 @@
     }
   }
 
+  .reviews {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    position: relative;
+    background-image: url("../../images/bg-reviews.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .reviewsOverlay {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(249, 200, 105, 0.92);
+    }
+  }
+
   @media screen and (min-width: $tablet) {
     width: $tablet;
   }

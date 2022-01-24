@@ -6,6 +6,9 @@
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
     "@mui/icons-material": "^5.2.5",
     "@mui/material": "^5.2.6",
     "@reduxjs/toolkit": "^1.7.1",
@@ -22,6 +25,7 @@
     "react-icons": "^4.3.1",
     "react-redux": "^7.2.6",
     "react-scripts": "5.0.0",
+    "react-stars": "^2.2.5",
     "redux-persist": "^6.0.0",
     "swiper": "^7.4.1",
     "web-vitals": "^2.1.2"
