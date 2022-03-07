@@ -1,3 +1,25 @@
+@import "../../../../styles/shared.scss";
+
+@media screen and (min-width: $tablet) {
+}
+
+@media screen and (min-width: $desktop) {
+}
+
+@media screen and (min-width: $desktopL) {
+  .mySwiper {
+    margin-left: 208px;
+    margin-right: 208px;
+  }
+}
+
+// @media screen and (min-width: $desktop4k) {
+//   .mySwiper {
+//     margin-left: 208px;
+//     margin-right: 208px;
+//   }
+// }
+
 .galleryCarousel {
   margin-top: 30px;
 }

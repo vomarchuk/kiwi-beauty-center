@@ -8,6 +8,8 @@
   .salon {
     position: relative;
     background-image: url("../../images/GalleryCarousel/foto-18.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .salonOverlay {
@@ -31,6 +33,7 @@
     background-image: url("../../images/bg-reviews.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
   }
 
   .reviewsOverlay {
@@ -57,7 +60,7 @@
     width: $desktopL;
   }
 
-  @media screen and (min-width: $desktop4k) {
-    width: $desktop4k;
-  }
+  // @media screen and (min-width: $desktop4k) {
+  //   width: $desktop4k;
+  // }
 }
