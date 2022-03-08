@@ -1,5 +1,13 @@
 @import "../../../../styles/shared.scss";
 
+.galleryCarousel {
+  margin-top: 30px;
+}
+
+.mySwiperSlide {
+  margin-top: 10px;
+}
+
 @media screen and (min-width: $tablet) {
 }
 
@@ -7,23 +15,13 @@
 }
 
 @media screen and (min-width: $desktopL) {
-  .mySwiper {
-    margin-left: 208px;
-    margin-right: 208px;
+  .mySwiperBigSlide {
+    display: flex;
+    justify-content: center;
+    height: 600px;
   }
-}
 
-// @media screen and (min-width: $desktop4k) {
-//   .mySwiper {
-//     margin-left: 208px;
-//     margin-right: 208px;
-//   }
-// }
-
-.galleryCarousel {
-  margin-top: 30px;
-}
-
-.mySwiperSlide {
-  margin-top: 10px;
+  .mySwiperSlide {
+    width: 1024px;
+  }
 }
