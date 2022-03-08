@@ -4,8 +4,21 @@
   margin-top: 30px;
 }
 
+.MySwiper {
+  position: relative;
+}
+
 .mySwiperSlide {
   margin-top: 10px;
+  position: absolute;
+}
+
+.mySwiperBigImage {
+  cursor: pointer;
+}
+
+.mySwiperSlideSmallImage {
+  cursor: pointer;
 }
 
 @media screen and (min-width: $tablet) {
@@ -18,10 +31,13 @@
   .mySwiperBigSlide {
     display: flex;
     justify-content: center;
-    height: 600px;
+  }
+
+  .mySwiperBigImage {
+    width: 720px;
   }
 
   .mySwiperSlide {
-    width: 1024px;
+    width: 720px;
   }
 }
