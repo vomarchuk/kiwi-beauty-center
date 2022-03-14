@@ -1,7 +1,6 @@
 import s from "./GalleryCarousel.module.scss";
-
+import images from "../../../../services/images.json";
 import { COLORS } from "../../../../Constants";
-
 import { useState } from "react";
 
 // Import Swiper React components
@@ -24,12 +23,9 @@ const GalleryCarousel = () => {
 
   return (
     <div className={s.galleryCarousel}>
-      {" "}
       <Swiper
         style={{
-          "--swiper-navigation-color": `$ {
-          COLORS.accentColor
-        }
+          "--swiper-navigation-color": `${COLORS.accentColor}
 
         `,
           "--swiper-pagination-color": "#fff",
@@ -42,89 +38,12 @@ const GalleryCarousel = () => {
         }}
         className={s.mySwiper}
       >
-        {" "}
-        <SwiperSlide className={s.mySwiperBigSlide}>
-          {" "}
-          <img
-            className={s.mySwiperBigImage}
-            src="https://swiperjs.com/demos/images/nature-1.jpg"
-            alt=""
-          />{" "}
-        </SwiperSlide>{" "}
-        <SwiperSlide className={s.mySwiperBigSlide}>
-          {" "}
-          <img
-            className={s.mySwiperBigImage}
-            src="https://swiperjs.com/demos/images/nature-2.jpg"
-            alt=""
-            images
-          />{" "}
-        </SwiperSlide>{" "}
-        <SwiperSlide className={s.mySwiperBigSlide}>
-          {" "}
-          <img
-            className={s.mySwiperBigImage}
-            src="https://swiperjs.com/demos/images/nature-3.jpg"
-            alt="images"
-          />{" "}
-        </SwiperSlide>{" "}
-        <SwiperSlide className={s.mySwiperBigSlide}>
-          {" "}
-          <img
-            className={s.mySwiperBigImage}
-            src="https://swiperjs.com/demos/images/nature-4.jpg"
-            alt="images"
-          />{" "}
-        </SwiperSlide>{" "}
-        <SwiperSlide className={s.mySwiperBigSlide}>
-          {" "}
-          <img
-            className={s.mySwiperBigImage}
-            src="https://swiperjs.com/demos/images/nature-5.jpg"
-            alt="images"
-          />{" "}
-        </SwiperSlide>{" "}
-        <SwiperSlide className={s.mySwiperBigSlide}>
-          {" "}
-          <img
-            className={s.mySwiperBigImage}
-            src="https://swiperjs.com/demos/images/nature-6.jpg"
-            alt="images"
-          />{" "}
-        </SwiperSlide>{" "}
-        <SwiperSlide className={s.mySwiperBigSlide}>
-          {" "}
-          <img
-            className={s.mySwiperBigImage}
-            src="https://swiperjs.com/demos/images/nature-7.jpg"
-            alt="images"
-          />{" "}
-        </SwiperSlide>{" "}
-        <SwiperSlide className={s.mySwiperBigSlide}>
-          {" "}
-          <img
-            className={s.mySwiperBigImage}
-            src="https://swiperjs.com/demos/images/nature-8.jpg"
-            alt="images"
-          />{" "}
-        </SwiperSlide>{" "}
-        <SwiperSlide className={s.mySwiperBigSlide}>
-          {" "}
-          <img
-            className={s.mySwiperBigImage}
-            src="https://swiperjs.com/demos/images/nature-9.jpg"
-            alt="images"
-          />{" "}
-        </SwiperSlide>{" "}
-        <SwiperSlide className={s.mySwiperBigSlide}>
-          {" "}
-          <img
-            className={s.mySwiperBigImage}
-            src="https://swiperjs.com/demos/images/nature-10.jpg"
-            alt="images"
-          />{" "}
-        </SwiperSlide>{" "}
-      </Swiper>{" "}
+        {images.map(({ id, src, alt }) => (
+          <SwiperSlide key={id} className={s.mySwiperBigSlide}>
+            <img className={s.mySwiperBigImage} src={src} alt={alt} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
       <Swiper
         onSwiper={setThumbsSwiper}
         loop={true}
@@ -134,86 +53,12 @@ const GalleryCarousel = () => {
         watchSlidesProgress={true}
         className={s.mySwiperSlide}
       >
-        {" "}
-        <SwiperSlide>
-          {" "}
-          <img
-            className={s.mySwiperSlideSmallImage}
-            src="https://swiperjs.com/demos/images/nature-1.jpg"
-            alt="small images"
-          />{" "}
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          {" "}
-          <img
-            className={s.mySwiperSlideSmallImage}
-            src="https://swiperjs.com/demos/images/nature-2.jpg"
-            alt="small images"
-          />{" "}
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          {" "}
-          <img
-            className={s.mySwiperSlideSmallImage}
-            src="https://swiperjs.com/demos/images/nature-3.jpg"
-            alt="small images"
-          />{" "}
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          {" "}
-          <img
-            className={s.mySwiperSlideSmallImage}
-            src="https://swiperjs.com/demos/images/nature-4.jpg"
-            alt="small images"
-          />{" "}
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          {" "}
-          <img
-            className={s.mySwiperSlideSmallImage}
-            src="https://swiperjs.com/demos/images/nature-5.jpg"
-            alt="small images"
-          />{" "}
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          {" "}
-          <img
-            className={s.mySwiperSlideSmallImage}
-            src="https://swiperjs.com/demos/images/nature-6.jpg"
-            alt="small images"
-          />{" "}
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          {" "}
-          <img
-            className={s.mySwiperSlideSmallImage}
-            src="https://swiperjs.com/demos/images/nature-7.jpg"
-            alt="small images"
-          />{" "}
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          {" "}
-          <img
-            className={s.mySwiperSlideSmallImage}
-            src="https://swiperjs.com/demos/images/nature-8.jpg"
-            alt="small images"
-          />{" "}
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          {" "}
-          <img
-            src="https://swiperjs.com/demos/images/nature-9.jpg"
-            alt="small images"
-          />{" "}
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          {" "}
-          <img
-            src="https://swiperjs.com/demos/images/nature-10.jpg"
-            alt="small images"
-          />{" "}
-        </SwiperSlide>{" "}
-      </Swiper>{" "}
+        {images.map(({ id, src, alt }) => (
+          <SwiperSlide key={id}>
+            <img className={s.mySwiperSlideSmallImage} src={src} alt={alt} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };
