@@ -1,9 +1,9 @@
 @import "../../styles/shared.scss";
 
-//mobile
 .contact {
   @extend %container;
   width: 100%;
+
   padding-top: 15px;
   padding-bottom: 15px;
 
@@ -13,7 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: default;
+    text-align: center;
   }
 
   &__phone {
@@ -34,7 +34,9 @@
   }
 
   &__workTime {
-    cursor: default;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     .workTime__item {
       display: flex;
@@ -49,17 +51,27 @@
   &__icon {
     margin-right: 5px;
   }
-}
 
-.contact--header {
-  position: absolute;
-  bottom: 0;
+  &--header {
+    position: absolute;
+    bottom: 0;
 
-  background-color: rgba(#151515, 0.15);
-  border-top: rgba(#fff, 0.15) 1px solid;
+    background-color: rgba(#151515, 0.15);
+    border-top: rgba(#fff, 0.15) 1px solid;
+  }
 
-  .contact__workTime {
-    display: flex;
-    justify-content: center;
+  &--footer {
+  }
+
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
+  }
+
+  @media screen and (min-width: $desktopL) {
+    max-width: $desktopL;
   }
 }

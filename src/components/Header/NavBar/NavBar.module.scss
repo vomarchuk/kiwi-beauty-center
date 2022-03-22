@@ -1,5 +1,6 @@
 .NavBar {
   background-color: teal;
+  position: relative;
 }
 
 .hamburger {
@@ -7,4 +8,8 @@
   top: 10px;
   right: 9px;
   z-index: 1;
+}
+
+.sss {
+  background-color: #fff;
 }

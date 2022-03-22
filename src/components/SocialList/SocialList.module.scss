@@ -46,4 +46,12 @@
 }
 
 .social--footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .social__item:not(:first-child) {
+    margin-top: 0;
+    margin-left: 30px;
+  }
 }

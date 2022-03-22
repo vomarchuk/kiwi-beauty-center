@@ -44,6 +44,7 @@ const NavBar = ({ children }) => {
         open={isOpen}
         onClose={toggleDrawer(false)}
         onOpen={toggleDrawer(true)}
+        classes={s.sss}
       >
         <NavList />
       </MyDrawer>

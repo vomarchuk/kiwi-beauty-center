@@ -4,7 +4,7 @@
       .cls-1,
       .cls-12,
       .cls-15 {
-        fill: none;
+        /* fill: none; */
       }
 
       .cls-2 {

@@ -1,24 +1,30 @@
+.logo {
+  height: auto;
+}
+
 .logo--header {
   position: absolute;
   top: 20px;
   left: 20px;
   width: 100px;
-  height: auto;
+  fill: #fff;
 }
 
 .logo--nav {
   margin-top: 25px;
-  width: 100px;
-  height: auto;
+  width: 130px;
+
+  fill: #fff;
 }
 
 .logo--swiperSlide {
   width: 150px;
-  height: auto;
+
   padding-top: 30px;
 }
 
 .logo--footer {
   width: 150px;
-  height: auto;
+
+  fill: #fff;
 }

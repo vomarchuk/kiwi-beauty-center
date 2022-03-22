@@ -1,9 +1,12 @@
 @import "../../styles/shared.scss";
 
 .footer {
-  background-color: #242424;
   margin-left: auto;
   margin-right: auto;
+  padding: 20px 0;
+
+  text-align: center;
+  background-color: #242424;
 
   @media screen and (min-width: $tablet) {
     max-width: $tablet;

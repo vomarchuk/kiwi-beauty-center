@@ -6,12 +6,8 @@ const Footer = () => {
   return (
     <footer className={s.footer}>
       <Logo styles="footer" />
-      <section className={s.contactList}>
-        <ContactList />
-      </section>
-      <section>
-        <SocialList styles="footer" />
-      </section>
+      <ContactList styles="footer" />
+      <SocialList styles="footer" />
     </footer>
   );
 };
