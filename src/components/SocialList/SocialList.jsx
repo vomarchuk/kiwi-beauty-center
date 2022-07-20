@@ -1,28 +1,23 @@
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import { WrapperLink } from "../../wrappers";
+import { LINKS } from "../../Constants";
+
 import s from "./SocialList.module.scss";
+
+const { INSTAGRAM, FACEBOOK } = LINKS;
 
 const SocialList = ({ styles }) => {
   return (
     <ul className={`${s.social}  ${styles && s[`social--${styles}`]} `}>
       <li className={s.social__item}>
-        <a
-          className={s.social__link}
-          href="https://www.facebook.com/kiwibeautycenter/?modal=admin_todo_tour"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <WrapperLink link={FACEBOOK} target="_blank">
           <FaFacebookF className={`${s.facebook}  ${s.icon}`} />
-        </a>
+        </WrapperLink>
       </li>
       <li className={s.social__item}>
-        <a
-          className={s.social__link}
-          href="https://www.instagram.com/kiwi_beautycenter/"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <WrapperLink link={INSTAGRAM} target="_blank">
           <FaInstagram className={`${s.instagram} ${s.icon}`} />
-        </a>
+        </WrapperLink>
       </li>
     </ul>
   );
