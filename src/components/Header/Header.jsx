@@ -5,6 +5,10 @@ import ContactList from "../ContactList";
 import NavBar from "./NavBar";
 import Hero from "./Hero";
 import Logo from "../Logo";
+import { WrapperLink } from "../../wrappers";
+import { LINKS } from "../../Constants";
+
+const { RESERVATION_ONLINE } = LINKS;
 
 const Header = () => {
   return (
@@ -12,7 +16,9 @@ const Header = () => {
       <Logo styles="header" />
       <NavBar />
       <Hero />
-      <Button variant="reservation" name="Umów się na wizytę" />
+      <WrapperLink link={RESERVATION_ONLINE} target="_blank">
+        <Button variant="reservation" name="Umów się na wizytę" />
+      </WrapperLink>
       <SocialList styles="header" />
       <ContactList styles="header" />
     </header>

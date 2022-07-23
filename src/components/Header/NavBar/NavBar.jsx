@@ -5,7 +5,7 @@ import { useState } from "react";
 import Hamburger from "hamburger-react";
 import s from "./NavBar.module.scss";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
-import Drawer from "@mui/material/Drawer";
+// import Drawer from "@mui/material/Drawer";
 
 import { styled } from "@mui/system";
 
@@ -21,7 +21,6 @@ const NavBar = ({ children }) => {
   const [isOpen, setOpen] = useState(false);
 
   const classes = useStyles();
-  console.log(classes);
   const toggleDrawer = (open) => (event) => {
     if (
       event &&
@@ -59,7 +58,6 @@ const NavBar = ({ children }) => {
   //       anchor="right"
   //       classes={{ paper: classes.drawerPaper }}
   //     >
-  //       <div>sasdasdasdasdasdasdasdas</div>
   //     </Drawer>
   //   </div>
   // );
