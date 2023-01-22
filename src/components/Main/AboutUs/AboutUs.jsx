@@ -6,7 +6,8 @@ import GalleryCarousel from "./GalleryCarousel/GalleryCarousel";
 const AboutUs = () => {
   return (
     <div className={s.aboutUs}>
-      <SalonDescription /> <GalleryCarousel />{" "}
+      <SalonDescription />
+      <GalleryCarousel />
     </div>
   );
 };

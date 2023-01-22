@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import { Provider } from "react-redux";
@@ -9,9 +9,9 @@ import "./styles/base.scss";
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Suspense fallback="loading...">
-        <App />
-      </Suspense>
+      {/* <Suspense fallback="loading..."> */}
+      <App />
+      {/* </Suspense> */}
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

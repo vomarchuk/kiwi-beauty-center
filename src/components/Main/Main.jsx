@@ -4,7 +4,6 @@ import AboutUs from "./AboutUs";
 // import Reviews from './Reviews';
 
 import s from "./Main.module.scss";
-
 const Main = () => {
   return (
     <main className={s.main}>

@@ -42,6 +42,8 @@ const GalleryCarousel = () => {
               className={s.mySwiperBigImage}
               src={src}
               alt={alt}
+              loading="lazy"
+              decoding="async"
               width="1004px"
               height="1004px"
             />
@@ -61,6 +63,7 @@ const GalleryCarousel = () => {
           <SwiperSlide key={id}>
             <img
               className={s.mySwiperSlideSmallImage}
+              loading="lazy"
               src={src}
               alt={alt}
               width="243px"
