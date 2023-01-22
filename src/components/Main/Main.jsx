@@ -1,7 +1,7 @@
 import Container from "../Container";
 import CarouselService from "./CarouselService";
 import AboutUs from "./AboutUs";
-import Reviews from "./Reviews";
+// import Reviews from './Reviews';
 
 import s from "./Main.module.scss";
 
@@ -16,11 +16,11 @@ const Main = () => {
           <AboutUs />
         </Container>
       </section>
-      <section className={`${s.reviews}  ${s.reviewsOverlay} `}>
-        <Container>
-          <Reviews />
-        </Container>
-      </section>
+      {/* <section className={`${s.reviews}  ${s.reviewsOverlay} `}> */}
+      {/* <Container> */}
+      {/* <Reviews /> */}
+      {/* </Container> */}
+      {/* </section> */}
     </main>
   );
 };

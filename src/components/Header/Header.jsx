@@ -2,7 +2,7 @@ import s from "./Header.module.scss";
 import Button from "../Button";
 import SocialList from "../SocialList";
 import ContactList from "../ContactList";
-import NavBar from "./NavBar";
+import NavMenu from "./NavMenu";
 import Hero from "./Hero";
 import Logo from "../Logo";
 import { WrapperLink } from "../../wrappers";
@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <header className={s.header}>
       <Logo styles="header" />
-      <NavBar />
+      <NavMenu />
       <Hero />
       <WrapperLink link={RESERVATION_ONLINE} target="_blank">
         <Button variant="reservation" name="Umów się na wizytę" />
