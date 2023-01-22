@@ -1,17 +1,11 @@
-import { lazy, Suspense } from "react";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import Main from "../components/Main";
+import { lazy } from "react";
 
-const HeaderPage = lazy(() => import("../components/Header"));
-console.log(HeaderPage);
+const HomePage = lazy(() => import("../pages"));
 
 function App() {
   return (
     <>
-      <Header />
-      <Main />
-      <Footer />
+      <HomePage />
     </>
   );
 }
