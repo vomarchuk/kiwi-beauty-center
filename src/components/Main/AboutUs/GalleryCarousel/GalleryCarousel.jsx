@@ -25,9 +25,7 @@ const GalleryCarousel = () => {
     <div className={s.galleryCarousel}>
       <Swiper
         style={{
-          "--swiper-navigation-color": `${COLORS.accentColor}
-
-        `,
+          "--swiper-navigation-color": `${COLORS.accentColor}`,
           "--swiper-pagination-color": "#fff",
         }}
         loop={true}
@@ -40,7 +38,13 @@ const GalleryCarousel = () => {
       >
         {images.map(({ id, src, alt }) => (
           <SwiperSlide key={id} className={s.mySwiperBigSlide}>
-            <img className={s.mySwiperBigImage} src={src} alt={alt} />
+            <img
+              className={s.mySwiperBigImage}
+              src={src}
+              alt={alt}
+              width="672px"
+              height="672px"
+            />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -55,7 +59,13 @@ const GalleryCarousel = () => {
       >
         {images.map(({ id, src, alt }) => (
           <SwiperSlide key={id}>
-            <img className={s.mySwiperSlideSmallImage} src={src} alt={alt} />
+            <img
+              className={s.mySwiperSlideSmallImage}
+              src={src}
+              alt={alt}
+              width="173px"
+              height="173px"
+            />
           </SwiperSlide>
         ))}
       </Swiper>
