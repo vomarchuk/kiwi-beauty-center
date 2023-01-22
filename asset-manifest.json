@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/kiwi-beauty-center/static/css/main.c59edca3.css",
-    "main.js": "/kiwi-beauty-center/static/js/main.d4768931.js",
+    "main.css": "/kiwi-beauty-center/static/css/main.c8ef6551.css",
+    "main.js": "/kiwi-beauty-center/static/js/main.5d504367.js",
     "static/js/312.e3f2f119.chunk.js": "/kiwi-beauty-center/static/js/312.e3f2f119.chunk.js",
     "static/media/foto-18.jpg": "/kiwi-beauty-center/static/media/foto-18.75b66866e82e6ca74806.jpg",
     "static/media/bg-reviews.jpg": "/kiwi-beauty-center/static/media/bg-reviews.e7ca0cfe783e90fb5a11.jpg",
@@ -13,12 +13,12 @@
     "static/media/depilacja.webp": "/kiwi-beauty-center/static/media/depilacja.bc53040b01f210f60f1b.webp",
     "static/media/manicure.webp": "/kiwi-beauty-center/static/media/manicure.e91a649a6bdc6f803386.webp",
     "index.html": "/kiwi-beauty-center/index.html",
-    "main.c59edca3.css.map": "/kiwi-beauty-center/static/css/main.c59edca3.css.map",
-    "main.d4768931.js.map": "/kiwi-beauty-center/static/js/main.d4768931.js.map",
+    "main.c8ef6551.css.map": "/kiwi-beauty-center/static/css/main.c8ef6551.css.map",
+    "main.5d504367.js.map": "/kiwi-beauty-center/static/js/main.5d504367.js.map",
     "312.e3f2f119.chunk.js.map": "/kiwi-beauty-center/static/js/312.e3f2f119.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c59edca3.css",
-    "static/js/main.d4768931.js"
+    "static/css/main.c8ef6551.css",
+    "static/js/main.5d504367.js"
   ]
 }
