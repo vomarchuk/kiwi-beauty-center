@@ -42,8 +42,8 @@ const GalleryCarousel = () => {
               className={s.mySwiperBigImage}
               src={src}
               alt={alt}
-              width="672px"
-              height="672px"
+              width="1004px"
+              height="1004px"
             />
           </SwiperSlide>
         ))}
@@ -63,8 +63,8 @@ const GalleryCarousel = () => {
               className={s.mySwiperSlideSmallImage}
               src={src}
               alt={alt}
-              width="173px"
-              height="173px"
+              width="243px"
+              height="243px"
             />
           </SwiperSlide>
         ))}
