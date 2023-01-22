@@ -1,7 +1,7 @@
-import s from "./AboutUs.module.scss";
+import s from './AboutUs.module.scss';
 
-import SalonDescription from "./SalonDescription";
-import GalleryCarousel from "./GalleryCarousel/GalleryCarousel";
+import SalonDescription from './SalonDescription';
+import GalleryCarousel from './GalleryCarousel/GalleryCarousel';
 
 const AboutUs = () => {
   return (

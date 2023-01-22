@@ -1,9 +1,9 @@
-import Container from "../Container";
-import CarouselService from "./CarouselService";
-import AboutUs from "./AboutUs";
+import Container from '../Container';
+import CarouselService from './CarouselService';
+import AboutUs from './AboutUs';
 // import Reviews from './Reviews';
 
-import s from "./Main.module.scss";
+import s from './Main.module.scss';
 const Main = () => {
   return (
     <main className={s.main}>

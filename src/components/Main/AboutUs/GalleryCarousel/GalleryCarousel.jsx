@@ -1,19 +1,19 @@
-import s from "./GalleryCarousel.module.scss";
-import images from "../../../../services/images.json";
-import { COLORS } from "../../../../Constants";
-import { useState } from "react";
+import s from './GalleryCarousel.module.scss';
+import images from '../../../../services/images.json';
+import { COLORS } from '../../../../Constants';
+import { useState } from 'react';
 
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
 
 // import Swiper core and required modules
-import SwiperCore, { FreeMode, Navigation, Thumbs } from "swiper";
+import SwiperCore, { FreeMode, Navigation, Thumbs } from 'swiper';
 
 // install Swiper modules
 SwiperCore.use([FreeMode, Navigation, Thumbs]);
@@ -25,8 +25,8 @@ const GalleryCarousel = () => {
     <div className={s.galleryCarousel}>
       <Swiper
         style={{
-          "--swiper-navigation-color": `${COLORS.accentColor}`,
-          "--swiper-pagination-color": "#fff",
+          '--swiper-navigation-color': `${COLORS.accentColor}`,
+          '--swiper-pagination-color': '#fff',
         }}
         loop={true}
         spaceBetween={10}
