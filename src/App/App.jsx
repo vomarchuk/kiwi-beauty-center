@@ -1,14 +1,22 @@
-// import { lazy } from 'react';
+import { lazy } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Home from '../pages/Home';
+import { PriceList } from "../pages/PriceList";
+import { ServiceSetup } from "../pages/ServiceSetup";
 
-// const HomePage = lazy(() => import('../pages'));
+const HomePage = lazy(() => import("../pages"));
+const Footer = lazy(() => import("../components/Footer"));
 
 function App() {
   return (
-    <>
-      <Home />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/Service Setup" element={<ServiceSetup />} />
+        <Route path="/:categoryId" element={<PriceList />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 

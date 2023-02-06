@@ -1,5 +1,5 @@
-import Logo from "../../Logo";
-import services from "../../../services/services.json";
+import Logo from "../Logo";
+import services from "../../services/services.json";
 
 import style from "./NavMenu.module.scss";
 
@@ -11,7 +11,7 @@ const NavList = ({ toggle }) => {
         {services.map(({ id, serviceName }) => {
           return (
             <li className={style["nav__item"]} key={id}>
-              <a className={style["nav__link"]} href="/">
+              <a className={style["nav__link"]} href={serviceName}>
                 {serviceName}
               </a>
             </li>

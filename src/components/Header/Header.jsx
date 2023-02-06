@@ -2,7 +2,7 @@ import s from "./Header.module.scss";
 import Button from "../Button";
 import SocialList from "../SocialList";
 import ContactList from "../ContactList";
-import NavMenu from "./NavMenu";
+import NavMenu from "../NavMenu";
 import Hero from "./Hero";
 import Logo from "../Logo";
 import { WrapperLink } from "../../wrappers";
