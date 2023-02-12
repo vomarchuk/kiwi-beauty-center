@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/kiwi-beauty-center/static/css/main.20b3c471.css",
-    "main.js": "/kiwi-beauty-center/static/js/main.d2437c2b.js",
+    "main.js": "/kiwi-beauty-center/static/js/main.1c6c33c3.js",
     "static/css/363.5b5f229f.chunk.css": "/kiwi-beauty-center/static/css/363.5b5f229f.chunk.css",
-    "static/js/363.94e14d8e.chunk.js": "/kiwi-beauty-center/static/js/363.94e14d8e.chunk.js",
+    "static/js/363.542988c6.chunk.js": "/kiwi-beauty-center/static/js/363.542988c6.chunk.js",
     "static/css/564.cd0f930b.chunk.css": "/kiwi-beauty-center/static/css/564.cd0f930b.chunk.css",
     "static/js/564.eeadcf26.chunk.js": "/kiwi-beauty-center/static/js/564.eeadcf26.chunk.js",
-    "static/js/424.06ffa8de.chunk.js": "/kiwi-beauty-center/static/js/424.06ffa8de.chunk.js",
+    "static/js/424.356117ca.chunk.js": "/kiwi-beauty-center/static/js/424.356117ca.chunk.js",
     "static/js/95.9c09131e.chunk.js": "/kiwi-beauty-center/static/js/95.9c09131e.chunk.js",
     "static/js/59.d8eb514a.chunk.js": "/kiwi-beauty-center/static/js/59.d8eb514a.chunk.js",
     "static/js/437.3ca96d6d.chunk.js": "/kiwi-beauty-center/static/js/437.3ca96d6d.chunk.js",
@@ -18,18 +18,18 @@
     "static/media/facebook.svg": "/kiwi-beauty-center/static/media/facebook.caa3f00d13fa74b9e4f8795957337456.svg",
     "index.html": "/kiwi-beauty-center/index.html",
     "main.20b3c471.css.map": "/kiwi-beauty-center/static/css/main.20b3c471.css.map",
-    "main.d2437c2b.js.map": "/kiwi-beauty-center/static/js/main.d2437c2b.js.map",
+    "main.1c6c33c3.js.map": "/kiwi-beauty-center/static/js/main.1c6c33c3.js.map",
     "363.5b5f229f.chunk.css.map": "/kiwi-beauty-center/static/css/363.5b5f229f.chunk.css.map",
-    "363.94e14d8e.chunk.js.map": "/kiwi-beauty-center/static/js/363.94e14d8e.chunk.js.map",
+    "363.542988c6.chunk.js.map": "/kiwi-beauty-center/static/js/363.542988c6.chunk.js.map",
     "564.cd0f930b.chunk.css.map": "/kiwi-beauty-center/static/css/564.cd0f930b.chunk.css.map",
     "564.eeadcf26.chunk.js.map": "/kiwi-beauty-center/static/js/564.eeadcf26.chunk.js.map",
-    "424.06ffa8de.chunk.js.map": "/kiwi-beauty-center/static/js/424.06ffa8de.chunk.js.map",
+    "424.356117ca.chunk.js.map": "/kiwi-beauty-center/static/js/424.356117ca.chunk.js.map",
     "95.9c09131e.chunk.js.map": "/kiwi-beauty-center/static/js/95.9c09131e.chunk.js.map",
     "59.d8eb514a.chunk.js.map": "/kiwi-beauty-center/static/js/59.d8eb514a.chunk.js.map",
     "437.3ca96d6d.chunk.js.map": "/kiwi-beauty-center/static/js/437.3ca96d6d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.20b3c471.css",
-    "static/js/main.d2437c2b.js"
+    "static/js/main.1c6c33c3.js"
   ]
 }
