@@ -38,6 +38,22 @@
   }
 }
 
+.logIn {
+  margin-top: 10px;
+
+  background-color: $accentColor;
+  color: #ffffff;
+
+  &:hover {
+    background-color: lighten($accentColor, 35%);
+    color: $accentColor;
+  }
+
+  &:active {
+    background-color: darken($accentColor, 5%);
+  }
+}
+
 .more--service {
   margin-top: 20px;
   color: #444444;

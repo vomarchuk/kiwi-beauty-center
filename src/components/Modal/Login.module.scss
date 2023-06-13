@@ -5,16 +5,44 @@
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.863);
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
-.login {
+.loginForm {
   z-index: 999;
   position: absolute;
+  position: fixed;
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
 
-  background-color: tomato;
+  // margin: 20px;
+  // padding: 20px;
+  flex-direction: column;
+  display: flex;
+
+  // background-color: tomato;
+}
+
+.input {
+  min-width: 300px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  outline: none;
+
+  border: 1px solid #54c263;
+}
+
+.input:not(first-child) {
+  margin-top: 10px;
+}
+
+.notification--error {
+  margin-top: 10px;
+  color: #bf1650;
+}
+
+.notification--error::before {
+  content: "⚠ ";
 }
