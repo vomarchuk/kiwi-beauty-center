@@ -7,10 +7,15 @@ import { PriceList } from "../pages/PriceList";
 import { ServiceSetup } from "../pages/ServiceSetup";
 
 const HomePage = lazy(() => import("../pages"));
+
 const Footer = lazy(() => import("../components/Footer"));
 
 function App() {
   const dispatch = useDispatch();
+
+  // fetch('http://localhost:3030/api/services/62015a6a064b3770e9537426')
+  //   .then((response) => response.json())
+  //   .then((response) => console.log(response));
 
   useEffect(() => dispatch(categoriesOperations.fetchCategories()), [dispatch]);
   return (
