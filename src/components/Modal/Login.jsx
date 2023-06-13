@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-
 import Button from "../Button";
 import s from "./Login.module.scss";
 
@@ -8,8 +7,8 @@ const Login = () => {
     register,
     handleSubmit,
     reset,
-    getValues,
-    watch,
+    // getValues,
+    // watch,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
@@ -17,8 +16,7 @@ const Login = () => {
     reset();
   };
   return (
-    <>
-      <div className={s.background}></div>
+    <div className={s.background}>
       <form className={s.loginForm} onSubmit={handleSubmit(onSubmit)}>
         <input
           className={s.input}
@@ -43,7 +41,7 @@ const Login = () => {
         )}
         <Button name="LogIn" variant="logIn" typeBtn="submit" />
       </form>
-    </>
+    </div>
   );
 };
 

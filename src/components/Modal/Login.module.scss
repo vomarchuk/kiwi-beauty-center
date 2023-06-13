@@ -1,28 +1,24 @@
 .background {
-  z-index: 998;
   position: fixed;
-  overflow: hidden;
+  display: block;
+  z-index: 998;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.863);
-  opacity: 0.8;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .loginForm {
-  z-index: 999;
   position: absolute;
-  position: fixed;
+  display: flex;
+  flex-direction: column;
 
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  // margin: 20px;
-  // padding: 20px;
-  flex-direction: column;
-  display: flex;
-
-  // background-color: tomato;
 }
 
 .input {
