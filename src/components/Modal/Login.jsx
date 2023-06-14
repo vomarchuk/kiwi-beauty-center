@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import Button from "../Button";
 import s from "./Login.module.scss";
 
-const Login = () => {
+const Login = ({ toggle }) => {
   const {
     register,
     handleSubmit,
@@ -11,12 +11,13 @@ const Login = () => {
     // watch,
     formState: { errors },
   } = useForm();
+
   const onSubmit = (data) => {
     console.log(data);
     reset();
   };
   return (
-    <div className={s.background}>
+    <div className={s.background} onClick={toggle}>
       <form className={s.loginForm} onSubmit={handleSubmit(onSubmit)}>
         <input
           className={s.input}
