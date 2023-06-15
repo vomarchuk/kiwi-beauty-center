@@ -19,7 +19,6 @@ const SalonDescription = () => {
         kosmetyczny
       </h2>
       {isOpen && <Login toggle={showMenu} />}
-      {/* {isOpen && <p>HELLO</p>} */}
       <p className={s.salonDescription__text}>
         Szanowni Państwo! Witamy serdecznie w naszym nowoczesnym
         <span className={s.accent}> Kiwi beauty center.</span> Piękne wnętrze,
