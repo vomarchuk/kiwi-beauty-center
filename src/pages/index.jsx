@@ -1,3 +1,3 @@
 export { default } from "./Home";
-export { PriceList } from "./PriceList";
+export { Price } from "./Price";
 export { ServiceSetup } from "./ServiceSetup";

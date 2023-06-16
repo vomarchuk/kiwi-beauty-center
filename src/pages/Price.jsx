@@ -1,11 +1,14 @@
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import * as categorySelectors from "../redux/categories/categoriesSelectors";
 import * as servicesOperations from "../redux/services/servicesOperations";
-import { useParams } from "react-router-dom";
 
-export const PriceList = () => {
+import Container from "../components/Container";
+import PriceList from "../components/PriceList";
+
+export const Price = () => {
   const dispatch = useDispatch();
   const { categoryId } = useParams();
 
@@ -21,15 +24,17 @@ export const PriceList = () => {
         )
       );
     }
-  }, [categories, dispatch]);
+  }, [categories, currentCategory, dispatch]);
 
   return (
-    <div style={{ color: "black" }}>
-      <a href="/"> BACK HOME</a>
-      {services.length > 0 &&
-        services.map((service) => {
-          return <p key={service["_id"]}>{service.name}</p>;
-        })}
-    </div>
+    <Container>
+      <div style={{ color: "black" }}>
+        <a href="/"> BACK HOME</a>
+        {services.length > 0 && (
+          <PriceList services={services} name={categoryId} />
+        )}
+      </div>
+      <button>ADD new service</button>
+    </Container>
   );
 };
