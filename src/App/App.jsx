@@ -5,12 +5,15 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { Price } from "../pages/Price";
 import { ServiceSetup } from "../pages/ServiceSetup";
+// import axios from 'axios';
 
 const HomePage = lazy(() => import("../pages"));
 
 const Footer = lazy(() => import("../components/Footer"));
 
 function App() {
+  // axios.get('/api/category/').then(({ data }) => console.log(data.data));
+
   const dispatch = useDispatch();
   useEffect(() => dispatch(categoriesOperations.fetchCategories()), [dispatch]);
   return (

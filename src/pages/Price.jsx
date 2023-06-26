@@ -2,22 +2,24 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
-import * as categorySelectors from "../redux/categories/categoriesSelectors";
+import * as categorySelectors from "../redux/categories/selectors";
 import * as servicesOperations from "../redux/services/servicesOperations";
+import * as servicesSelectors from "../redux/services/selectors";
 
 import Container from "../components/Container";
 import PriceList from "../components/PriceList";
+import { NewService } from "../components/Modal/NewService";
 
 export const Price = () => {
   const dispatch = useDispatch();
   const { categoryId } = useParams();
 
-  const categories = useSelector(categorySelectors.getCategories);
+  const categories = useSelector(categorySelectors.selectCategories);
   const currentCategory = categories.find((c) => c.category === categoryId);
-  const services = useSelector((state) => state.services.entities);
+  const services = useSelector(servicesSelectors.selectServices);
 
   useEffect(() => {
-    if (categories.length > 0) {
+    if (categories.length > 0 && currentCategory) {
       dispatch(
         servicesOperations.fetchAllServicesByCategoryById(
           currentCategory["_id"]
@@ -34,7 +36,14 @@ export const Price = () => {
           <PriceList services={services} name={categoryId} />
         )}
       </div>
-      <button>ADD new service</button>
+      <button
+        onClick={() => {
+          return console.log("open modal");
+        }}
+      >
+        ADD new service
+      </button>
+      <NewService />
     </Container>
   );
 };

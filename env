@@ -1,0 +1,18 @@
+/api/services/ - TEST
+/api/services/:categoryId - get all services by category ID
+
+
+
+
+
+
+router.get('/' - categoryCtrl.getAllCategories)
+router.delete('/:categoryId/' - removeCategoryById)
+router.get('/:categoryId' - getCategoriesById)
+router.post('/addCategory' - addCategory)
+
+router.post(
+  '/:categoryId/addService',
+  validation(addServiceSchema),
+  controllerWrapper(serviceCtrl.addService),
+)
