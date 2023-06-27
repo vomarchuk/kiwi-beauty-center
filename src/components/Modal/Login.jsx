@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
 import Button from "../Button";
-import s from "./Login.module.scss";
+import s from "./Modals.module.scss";
 
 const Login = ({ toggle }) => {
   const {

@@ -1,20 +1,10 @@
 import { useForm } from "react-hook-form";
-import { TextField } from "@mui/material";
-import s from "./Login.module.scss";
+import { Input } from "../Input";
+import Button from "../Button";
 
-const Input = ({ name, label, register, required }) => (
-  <TextField
-    color="success"
-    variant="outlined"
-    label={label}
-    autoComplete="off"
-    defaultValue=""
-    sx={{ bgcolor: "#ffffff" }}
-    {...register(`${name}`, { required })}
-  />
-);
+import s from "./Modals.module.scss";
 
-export const NewService = () => {
+export const NewService = ({ toggle }) => {
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
@@ -23,39 +13,55 @@ export const NewService = () => {
   };
 
   return (
-    <div className={s.background}>
-      <h2>Category</h2>
+    <div className={s.background} onClick={toggle}>
       <form
         name="add_service_form"
         onSubmit={handleSubmit(onSubmit)}
-        className={s.label}
+        className={s["add_service_form"]}
       >
         <Input
+          className="service_name"
           label="Nazwa usługi"
           name="name"
           autocomplete="on"
           register={register}
           required
         />
-        <fieldset>
-          <label>Pani</label>
-          <Input label="Cena standard" register={register} name="woman.cost" />
+        <fieldset className={s.fieldset}>
+          <label className={s.label}>Pani</label>
           <Input
+            className="cost"
+            label="Cena standard"
+            register={register}
+            name="woman.cost"
+          />
+          <Input
+            className="cost"
             label="Cena z kartą"
             register={register}
             name="woman.costByCard"
           />
         </fieldset>
-        <fieldset>
-          <label>Pan</label>
-          <Input label="Cena standard" register={register} name="man.cost" />
+        <fieldset className={s.fieldset}>
+          <label className={s.label}>Pan</label>
           <Input
+            className="cost"
+            label="Cena standard"
+            register={register}
+            name="man.cost"
+          />
+          <Input
+            className="cost"
             label="Cena z kartą"
             register={register}
             name="man.costByCard"
           />
         </fieldset>
-        <button type="submit">add new service</button>
+        <Button
+          name="add new service"
+          typeBtn="submit"
+          variant="more--service"
+        />
       </form>
     </div>
   );

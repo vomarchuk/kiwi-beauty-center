@@ -17,6 +17,7 @@
   transition: background-color 0.1s ease;
   transition-timing-function: ease;
   transition-duration: 0.5s;
+
   cursor: pointer;
 }
 
@@ -66,4 +67,12 @@
   &:active {
     background-color: darken($accentColor, 5%);
   }
+}
+
+.add_new_service {
+  @extend .more--service;
+  margin: 20px 0;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
 }
