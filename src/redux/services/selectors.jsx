@@ -1,1 +1,1 @@
-export const selectServices = (state) => state.services.entities;
+export const selectServices = (state) => state.services.entities.data;

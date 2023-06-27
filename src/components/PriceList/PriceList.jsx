@@ -60,10 +60,10 @@ const PriceList = ({ services, name }) => {
               >
                 <TableCell>{service.name}</TableCell>
                 <TableCell sx={{ textAlign: "right" }}>
-                  {service.price.woman.cost}
+                  {service.price.woman.cost} zł
                 </TableCell>
                 <TableCell sx={{ textAlign: "right" }}>
-                  {service.price.woman.costByCard}
+                  {service.price.woman.costByCard} zł
                 </TableCell>
                 <TableCell sx={{ textAlign: "right" }}></TableCell>
               </StyledTableRow>

@@ -41,9 +41,7 @@ export const Price = () => {
     <Container>
       <div style={{ color: "black", paddingTop: "20px" }}>
         <GoBack />
-        {services.length > 0 && (
-          <PriceList services={services} name={categoryId} />
-        )}
+        {services && <PriceList services={services} name={categoryId} />}
         <Button
           name="ADD new service"
           typeBtn="button"
