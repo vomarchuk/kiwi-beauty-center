@@ -1,28 +1,80 @@
+import {
+  Table,
+  TableBody,
+  TableCell,
+  tableCellClasses,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+  styled,
+} from "@mui/material";
+
+import { COLORS } from "../../Constants";
 import PriceItem from "../PriceItem/PriceItem";
 
 import s from "./PriceList.module.scss";
+
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  [`&.${tableCellClasses.head}`]: {
+    backgroundColor: COLORS.accentColor,
+    color: COLORS.textColor,
+  },
+  [`&.${tableCellClasses.body}`]: {
+    fontSize: 14,
+  },
+}));
+
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  "&:nth-of-type(odd)": {
+    backgroundColor: theme.palette.action.hover,
+  },
+  // hide last border
+  "&:last-child td, &:last-child th": {
+    border: 0,
+  },
+}));
+
 const PriceList = ({ services, name }) => {
   return (
-    <table className={s.table}>
-      <caption>{name}</caption>
-      <thead className={s.table_header}>
-        <tr>
-          <th rowSpan="2">Zabieg</th>
-          <th colSpan="2">Cena standard</th>
-          {/* <th></th> */}
-          <th colSpan="2">
-            Cena z kartą <span>Kiwi Beauty Center</span>
-          </th>
-          <th>edit</th>
-        </tr>
-      </thead>
-      <tbody>
-        {services &&
-          services.map((service) => {
-            return <PriceItem key={service["_id"]} service={service} />;
-          })}
-      </tbody>
-    </table>
+    <TableContainer component={Paper} sx={{ mt: "30px" }}>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <StyledTableCell>Zabieg</StyledTableCell>
+            <StyledTableCell sx={{ textAlign: "right" }}>
+              Cena standard
+            </StyledTableCell>
+            <StyledTableCell sx={{ textAlign: "right" }}>
+              Cena z kartą Kiwi Beauty Center
+            </StyledTableCell>
+            <StyledTableCell sx={{ textAlign: "right" }}>edit</StyledTableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {services &&
+            services.map((service) => (
+              <StyledTableRow
+                key={service["_id"]}
+                sx={{
+                  "&:last-child td, &:last-child th": {
+                    border: 0,
+                  },
+                }}
+              >
+                <TableCell>{service.name}</TableCell>
+                <TableCell sx={{ textAlign: "right" }}>
+                  {service.price.woman.cost}
+                </TableCell>
+                <TableCell sx={{ textAlign: "right" }}>
+                  {service.price.woman.costByCard}
+                </TableCell>
+                <TableCell sx={{ textAlign: "right" }}></TableCell>
+              </StyledTableRow>
+            ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
 };
 

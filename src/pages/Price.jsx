@@ -39,7 +39,7 @@ export const Price = () => {
 
   return (
     <Container>
-      <div style={{ color: "black" }}>
+      <div style={{ color: "black", paddingTop: "20px" }}>
         <GoBack />
         {services.length > 0 && (
           <PriceList services={services} name={categoryId} />
