@@ -9,8 +9,7 @@ export const fetchAllServicesByCategoryById = createAsyncThunk(
   async (id) => {
     try {
       const { data } = await axios.get(`/api/services/${id}`);
-      const result = data;
-      return result;
+      return data;
     } catch (error) {
       throw error;
     }
