@@ -9,11 +9,7 @@ import {
   Paper,
   styled,
 } from "@mui/material";
-
 import { COLORS } from "../../Constants";
-import PriceItem from "../PriceItem/PriceItem";
-
-import s from "./PriceList.module.scss";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
