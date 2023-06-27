@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.0e983cb9.css",
-    "main.js": "/static/js/main.49dd3718.js",
-    "static/css/893.27ea12fc.chunk.css": "/static/css/893.27ea12fc.chunk.css",
-    "static/js/893.70652f08.chunk.js": "/static/js/893.70652f08.chunk.js",
+    "main.css": "/static/css/main.a05c1a58.css",
+    "main.js": "/static/js/main.cde7faec.js",
+    "static/css/469.9abe01cf.chunk.css": "/static/css/469.9abe01cf.chunk.css",
+    "static/js/469.6fbbafa9.chunk.js": "/static/js/469.6fbbafa9.chunk.js",
     "static/css/564.17c8d209.chunk.css": "/static/css/564.17c8d209.chunk.css",
     "static/js/564.eeadcf26.chunk.js": "/static/js/564.eeadcf26.chunk.js",
     "static/js/424.356117ca.chunk.js": "/static/js/424.356117ca.chunk.js",
@@ -17,10 +17,10 @@
     "static/media/instagram.svg": "/static/media/instagram.f36f63431735db4731f9bdcb2ca3b520.svg",
     "static/media/facebook.svg": "/static/media/facebook.caa3f00d13fa74b9e4f8795957337456.svg",
     "index.html": "/index.html",
-    "main.0e983cb9.css.map": "/static/css/main.0e983cb9.css.map",
-    "main.49dd3718.js.map": "/static/js/main.49dd3718.js.map",
-    "893.27ea12fc.chunk.css.map": "/static/css/893.27ea12fc.chunk.css.map",
-    "893.70652f08.chunk.js.map": "/static/js/893.70652f08.chunk.js.map",
+    "main.a05c1a58.css.map": "/static/css/main.a05c1a58.css.map",
+    "main.cde7faec.js.map": "/static/js/main.cde7faec.js.map",
+    "469.9abe01cf.chunk.css.map": "/static/css/469.9abe01cf.chunk.css.map",
+    "469.6fbbafa9.chunk.js.map": "/static/js/469.6fbbafa9.chunk.js.map",
     "564.17c8d209.chunk.css.map": "/static/css/564.17c8d209.chunk.css.map",
     "564.eeadcf26.chunk.js.map": "/static/js/564.eeadcf26.chunk.js.map",
     "424.356117ca.chunk.js.map": "/static/js/424.356117ca.chunk.js.map",
@@ -29,7 +29,7 @@
     "437.3ca96d6d.chunk.js.map": "/static/js/437.3ca96d6d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e983cb9.css",
-    "static/js/main.49dd3718.js"
+    "static/css/main.a05c1a58.css",
+    "static/js/main.cde7faec.js"
   ]
 }
