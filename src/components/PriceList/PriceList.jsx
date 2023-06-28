@@ -9,7 +9,9 @@ import {
   Paper,
   styled,
 } from "@mui/material";
+import * as servicesOperations from "../../redux/services/servicesOperations";
 import { COLORS } from "../../Constants";
+import { useDispatch } from "react-redux";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -31,7 +33,12 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-const PriceList = ({ services, name }) => {
+const PriceList = ({ services }) => {
+  const dispatch = useDispatch();
+  const removeService = (id) => {
+    dispatch(servicesOperations.removeServicesByCategory(id));
+  };
+
   return (
     <TableContainer component={Paper} sx={{ mt: "30px" }}>
       <Table>
@@ -65,7 +72,11 @@ const PriceList = ({ services, name }) => {
                 <TableCell sx={{ textAlign: "right" }}>
                   {service.price.woman.costByCard} zł
                 </TableCell>
-                <TableCell sx={{ textAlign: "right" }}></TableCell>
+                <TableCell sx={{ textAlign: "right" }}>
+                  <button onClick={() => removeService(service["_id"])}>
+                    delete
+                  </button>
+                </TableCell>
               </StyledTableRow>
             ))}
         </TableBody>

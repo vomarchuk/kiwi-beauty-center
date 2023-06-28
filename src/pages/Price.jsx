@@ -19,6 +19,7 @@ export const Price = () => {
     if (!isOpen) setOpen(true);
     if (e.target.nodeName === "DIV") setOpen(false);
   };
+  const closeModal = () => setOpen(false);
 
   const dispatch = useDispatch();
   const { categoryId } = useParams();
@@ -28,13 +29,10 @@ export const Price = () => {
   const services = useSelector(servicesSelectors.selectServices);
 
   useEffect(() => {
-    if (categories.length > 0 && currentCategory) {
+    if (categories.length > 0 && currentCategory)
       dispatch(
-        servicesOperations.fetchAllServicesByCategoryById(
-          currentCategory["_id"]
-        )
+        servicesOperations.getServicesByCategory(currentCategory["_id"])
       );
-    }
   }, [categories, currentCategory, dispatch]);
 
   return (
@@ -49,7 +47,13 @@ export const Price = () => {
           onClick={showMenu}
         />
       </div>
-      {isOpen && <NewService toggle={showMenu} />}
+      {isOpen && (
+        <NewService
+          toggle={showMenu}
+          categoryId={currentCategory}
+          closeModal={closeModal}
+        />
+      )}
     </Container>
   );
 };

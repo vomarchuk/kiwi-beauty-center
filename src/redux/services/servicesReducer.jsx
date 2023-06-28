@@ -1,19 +1,19 @@
 import { createReducer, combineReducers } from "@reduxjs/toolkit";
-import { fetchAllServicesByCategoryById } from "./servicesOperations";
+import { getServicesByCategory } from "./servicesOperations";
 
 const entities = createReducer([], {
-  [fetchAllServicesByCategoryById.fulfilled]: (_, action) => action.payload,
+  [getServicesByCategory.fulfilled]: (_, action) => action.payload,
 });
 
 const isLoading = createReducer(false, {
-  [fetchAllServicesByCategoryById.pending]: () => true,
-  [fetchAllServicesByCategoryById.fulfilled]: () => false,
-  [fetchAllServicesByCategoryById.rejected]: () => false,
+  [getServicesByCategory.pending]: () => true,
+  [getServicesByCategory.fulfilled]: () => false,
+  [getServicesByCategory.rejected]: () => false,
 });
 
 const error = createReducer(null, {
-  [fetchAllServicesByCategoryById.rejected]: (_, action) => action.payload,
-  [fetchAllServicesByCategoryById.pending]: () => null,
+  [getServicesByCategory.rejected]: (_, action) => action.payload,
+  [getServicesByCategory.pending]: () => null,
 });
 
 export default combineReducers({
