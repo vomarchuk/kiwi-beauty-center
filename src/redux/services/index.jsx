@@ -1,3 +1,2 @@
-export * as servicesAction from "./servicesAction";
-export * as servicesOperation from "./servicesOperation";
-export * as selectors from "./selectors";
+export * as servicesOperations from "./servicesOperations";
+export * as servicesSelectors from "./servicesSelectors";

@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
-import * as categorySelectors from "../redux/categories/selectors";
-import * as servicesOperations from "../redux/services/servicesOperations";
-import * as servicesSelectors from "../redux/services/selectors";
+import { categorySelectors } from "../redux/categories";
+import { servicesOperations, servicesSelectors } from "../redux/services";
 
 import Container from "../components/Container";
 import PriceList from "../components/PriceList";
@@ -14,6 +13,7 @@ import { GoBack } from "../components/GoBack";
 
 export const Price = () => {
   const [isOpen, setOpen] = useState(false);
+  const { category } = useParams();
 
   const showMenu = (e) => {
     if (!isOpen) setOpen(true);
@@ -22,24 +22,23 @@ export const Price = () => {
   const closeModal = () => setOpen(false);
 
   const dispatch = useDispatch();
-  const { categoryId } = useParams();
-
   const categories = useSelector(categorySelectors.selectCategories);
-  const currentCategory = categories.find((c) => c.category === categoryId);
+  const currentCategory = categories.find((c) => c.category === category);
   const services = useSelector(servicesSelectors.selectServices);
 
   useEffect(() => {
-    if (categories.length > 0 && currentCategory)
+    if (categories.length > 0 && currentCategory) {
       dispatch(
         servicesOperations.getServicesByCategory(currentCategory["_id"])
       );
+    }
   }, [categories, currentCategory, dispatch]);
 
   return (
     <Container>
       <div style={{ color: "black", paddingTop: "20px" }}>
         <GoBack />
-        {services && <PriceList services={services} name={categoryId} />}
+        {services && <PriceList services={services} name={category} />}
         <Button
           name="ADD new service"
           typeBtn="button"

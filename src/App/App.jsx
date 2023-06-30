@@ -1,6 +1,6 @@
 import { lazy, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import * as categoriesOperations from "../redux/categories/categoriesOperations";
+import { categoriesOperations } from "../redux/categories";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { Price } from "../pages/Price";
@@ -21,7 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/Service Setup" element={<ServiceSetup />} />
-        <Route path="/:categoryId" element={<Price />} />
+        <Route path="/:category" element={<Price />} />
       </Routes>
       <Footer />
     </BrowserRouter>

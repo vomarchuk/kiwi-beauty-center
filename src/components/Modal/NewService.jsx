@@ -1,11 +1,10 @@
+import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
+import { servicesOperations } from "../../redux/services";
 import { Input } from "../Input";
 import Button from "../Button";
 
-import * as servicesOperations from "../../redux/services/servicesOperations";
-
 import s from "./Modals.module.scss";
-import { useDispatch } from "react-redux";
 
 export const NewService = ({ toggle, categoryId, closeModal }) => {
   const { register, handleSubmit, reset } = useForm();

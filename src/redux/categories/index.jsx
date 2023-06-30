@@ -1,4 +1,2 @@
-export * as categoriesAction from "./categoriesActions";
-export * as categoriesOptions from "./categoriesOptions";
-
-export * as selectors from "./selectors";
+export * as categoriesOperations from "./categoriesOperations";
+export * as categorySelectors from "./categorySelectors";
