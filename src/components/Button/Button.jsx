@@ -1,5 +1,4 @@
 import s from "./Button.module.scss";
-
 const Button = ({ name, variant, typeBtn, onClick }) => {
   return (
     <button

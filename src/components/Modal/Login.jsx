@@ -21,7 +21,7 @@ const Login = ({ toggle }) => {
       <form className={s.loginForm} onSubmit={handleSubmit(onSubmit)}>
         <input
           className={s.input}
-          placeholder="login"
+          placeholder="e-mail"
           {...register("email", { required: true })}
         />
         <input

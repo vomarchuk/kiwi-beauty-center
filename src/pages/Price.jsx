@@ -11,9 +11,21 @@ import { NewService } from "../components/Modal";
 import Button from "../components/Button";
 import { GoBack } from "../components/GoBack";
 
+//
+import { update, getClicksValue } from "../redux/categories/categoriesSlice";
+import { useGetPokemonByNameQuery } from "../redux";
+import { Image } from "@mui/icons-material";
+//
+
 export const Price = () => {
   const [isOpen, setOpen] = useState(false);
   const { category } = useParams();
+
+  //
+  const count = useSelector(getClicksValue);
+  const { data, error, isLoading } = useGetPokemonByNameQuery("bulbasaur");
+
+  //
 
   const showMenu = (e) => {
     if (!isOpen) setOpen(true);
@@ -53,6 +65,10 @@ export const Price = () => {
           closeModal={closeModal}
         />
       )}
+
+      <button type="button" onClick={() => dispatch(update())}>
+        Number of clicks :{count}
+      </button>
     </Container>
   );
 };

@@ -3,21 +3,16 @@
 .button {
   display: inline-block;
   padding: 12px 30px;
-
   font-family: "Raleway", sans-serif;
-
   border: none;
-
   font-size: 13px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 3px;
   border-radius: 2px;
-
   transition: background-color 0.1s ease;
   transition-timing-function: ease;
   transition-duration: 0.5s;
-
   cursor: pointer;
 }
 
@@ -41,7 +36,6 @@
 
 .logIn {
   margin-top: 10px;
-
   background-color: $accentColor;
   color: #ffffff;
 

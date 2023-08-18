@@ -7,3 +7,5 @@ export const GoBack = () => (
     <ReplyIcon />
   </a>
 );
+
+// history.back();
