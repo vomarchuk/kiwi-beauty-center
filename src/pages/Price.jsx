@@ -13,8 +13,7 @@ import { GoBack } from "../components/GoBack";
 
 //
 import { update, getClicksValue } from "../redux/categories/categoriesSlice";
-import { useGetPokemonByNameQuery } from "../redux";
-import { Image } from "@mui/icons-material";
+// import { useGetPokemonByNameQuery } from '../redux';
 //
 
 export const Price = () => {
@@ -23,7 +22,7 @@ export const Price = () => {
 
   //
   const count = useSelector(getClicksValue);
-  const { data, error, isLoading } = useGetPokemonByNameQuery("bulbasaur");
+  // const { data, error, isLoading } = useGetPokemonByNameQuery('bulbasaur');
 
   //
 
