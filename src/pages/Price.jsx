@@ -1,55 +1,45 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-
-import { categorySelectors } from "../redux/categories";
-import { servicesOperations, servicesSelectors } from "../redux/services";
-
 import Container from "../components/Container";
 import PriceList from "../components/PriceList";
 import { NewService } from "../components/Modal";
 import Button from "../components/Button";
 import { GoBack } from "../components/GoBack";
-
-//
-import { update, getClicksValue } from "../redux/categories/categoriesSlice";
-// import { useGetPokemonByNameQuery } from '../redux';
-//
-
+import { useGetAllCategoriesQuery } from "../redux/categories/categoriesSlice";
+import { useGetAllServicesByCategoryIdQuery } from "../redux/services/servicesSlice";
 export const Price = () => {
   const [isOpen, setOpen] = useState(false);
   const { category } = useParams();
+  let currentCategory = "";
 
-  //
-  const count = useSelector(getClicksValue);
-  // const { data, error, isLoading } = useGetPokemonByNameQuery('bulbasaur');
+  const { data, isLoading } = useGetAllCategoriesQuery();
+  const categories = data?.data;
 
-  //
+  if (!isLoading) {
+    currentCategory = categories.find((c) => c.category === category);
+  }
+
+  const { data: servicesData, isFetching } = useGetAllServicesByCategoryIdQuery(
+    currentCategory._id,
+    {
+      skip: currentCategory === "",
+    }
+  );
 
   const showMenu = (e) => {
     if (!isOpen) setOpen(true);
     if (e.target.nodeName === "DIV") setOpen(false);
   };
+
   const closeModal = () => setOpen(false);
-
-  const dispatch = useDispatch();
-  const categories = useSelector(categorySelectors.selectCategories);
-  const currentCategory = categories.find((c) => c.category === category);
-  const services = useSelector(servicesSelectors.selectServices);
-
-  useEffect(() => {
-    if (categories.length > 0 && currentCategory) {
-      dispatch(
-        servicesOperations.getServicesByCategory(currentCategory["_id"])
-      );
-    }
-  }, [categories, currentCategory, dispatch]);
 
   return (
     <Container>
       <div style={{ color: "black", paddingTop: "20px" }}>
         <GoBack />
-        {services && <PriceList services={services} name={category} />}
+        {servicesData && !isFetching && (
+          <PriceList services={servicesData.data} name={category} />
+        )}
         <Button
           name="ADD new service"
           typeBtn="button"
@@ -64,10 +54,6 @@ export const Price = () => {
           closeModal={closeModal}
         />
       )}
-
-      <button type="button" onClick={() => dispatch(update())}>
-        Number of clicks :{count}
-      </button>
     </Container>
   );
 };

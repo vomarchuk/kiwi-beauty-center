@@ -16,7 +16,8 @@ export const NewService = ({ toggle, categoryId, closeModal }) => {
       categoryId: categoryId["_id"],
       newService: data,
     };
-    dispatch(servicesOperations.addServiceByCategory(newService));
+    console.log(newService);
+    // dispatch(servicesOperations.addServiceByCategory(newService));
     reset();
     closeModal();
   };

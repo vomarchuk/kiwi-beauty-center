@@ -11,37 +11,27 @@ import {
 } from "redux-persist";
 
 import { reviewsAPI } from "./reviewsAPI";
-import categoriesReducer from "./categories/categoriesReducer";
-import servicesReducer from "./services/servicesReducer";
-import { clicksReducer } from "./categories/categoriesSlice";
-//
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-export const pokemonApi = createApi({
-  reducerPath: "pokemonApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "https://pokeapi.co/api/v2/" }),
-  endpoints: (builder) => ({
-    getPokemonByName: builder.query({
-      query: (name) => `pokemon/${name}`,
-    }),
-  }),
-});
-export const { useGetPokemonByNameQuery } = pokemonApi;
-//
+import { categoriesAPI } from "./categories/categoriesSlice";
+import { servicesAPI } from "./services/servicesSlice";
+
 export const store = configureStore({
   reducer: {
-    clicks: clicksReducer,
-    [pokemonApi.reducerPath]: pokemonApi.reducer,
-
-    categories: categoriesReducer,
-    services: servicesReducer,
+    //
+    [categoriesAPI.reducerPath]: categoriesAPI.reducer,
+    [servicesAPI.reducerPath]: servicesAPI.reducer,
+    //
     [reviewsAPI.reducerPath]: reviewsAPI.reducer,
   },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
+  middleware: (getDefaultMiddleware) => [
+    ...getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }).concat(reviewsAPI.middleware),
+    }),
+    reviewsAPI.middleware,
+    categoriesAPI.middleware,
+    servicesAPI.middleware,
+  ],
 });
 
 export const persistor = persistStore(store);

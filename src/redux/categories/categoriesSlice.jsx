@@ -1,27 +1,33 @@
-import { createSlice } from "@reduxjs/toolkit";
-import storage from "redux-persist/lib/storage";
-import { persistReducer } from "redux-persist";
+// import { persistReducer } from 'redux-persist';
+// const clicksSlice = createSlice({
+//   name: 'clicks',
+//   initialState,
+//   reducers: {
+//     update(state) {
+//       state.value += 1;
+//     },
+//   },
+// });
 
-const initialState = { value: 0 };
+// const persistConfig = {
+//   key: 'clicks',
+//   storage,
+// };
 
-const clicksSlice = createSlice({
-  name: "clicks",
-  initialState,
-  reducers: {
-    update(state) {
-      state.value += 1;
-    },
-  },
+// export const clicksReducer = persistReducer(persistConfig, clicksSlice.reducer);
+// export const { update } = clicksSlice.actions;
+
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { DEFAULT_URL } from "../../Constants";
+//
+
+export const categoriesAPI = createApi({
+  reducerPath: "categoriesAPI",
+  baseQuery: fetchBaseQuery({ baseUrl: DEFAULT_URL }),
+  endpoints: (builder) => ({
+    getAllCategories: builder.query({
+      query: () => `category`,
+    }),
+  }),
 });
-
-const persistConfig = {
-  key: "clicks",
-  storage,
-};
-
-export const clicksReducer = persistReducer(persistConfig, clicksSlice.reducer);
-export const { update } = clicksSlice.actions;
-
-//Selectors
-
-export const getClicksValue = (state) => state.clicks.value;
+export const { useGetAllCategoriesQuery } = categoriesAPI;

@@ -10,11 +10,11 @@ import "./styles/base.scss";
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <Suspense fallback="loading...">
-          <App />
-        </Suspense>
-      </PersistGate>
+      {/* <PersistGate loading={null} persistor={persistor}> */}
+      <Suspense fallback="loading...">
+        <App />
+      </Suspense>
+      {/* </PersistGate> */}
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")

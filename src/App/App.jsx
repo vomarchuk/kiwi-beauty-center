@@ -1,15 +1,13 @@
-import { lazy, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { categoriesOperations } from "../redux/categories";
+import { lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Price, ServiceSetup } from "../pages";
+import { useGetAllCategoriesQuery } from "../redux/categories/categoriesSlice";
 
 const HomePage = lazy(() => import("../pages"));
 const Footer = lazy(() => import("../components/Footer"));
 
 function App() {
-  const dispatch = useDispatch();
-  useEffect(() => dispatch(categoriesOperations.fetchCategories()), [dispatch]);
+  useGetAllCategoriesQuery();
   return (
     <BrowserRouter>
       <Routes>
