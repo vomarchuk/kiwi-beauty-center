@@ -1,5 +1,5 @@
 import s from "./Header.module.scss";
-import Button from "../Button";
+import { Button } from "../Button";
 import SocialList from "../SocialList";
 import ContactList from "../ContactList";
 import NavMenu from "../NavMenu";

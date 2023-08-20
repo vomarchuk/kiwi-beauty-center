@@ -1,5 +1,5 @@
 import s from "./Button.module.scss";
-const Button = ({ name, variant, typeBtn, onClick }) => {
+export const Button = ({ name, variant, typeBtn, onClick }) => {
   return (
     <button
       className={`${s["button"]}  ${s[variant]}`}
@@ -10,5 +10,3 @@ const Button = ({ name, variant, typeBtn, onClick }) => {
     </button>
   );
 };
-
-export default Button;

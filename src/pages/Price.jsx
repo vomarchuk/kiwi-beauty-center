@@ -2,8 +2,8 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Container from "../components/Container";
 import PriceList from "../components/PriceList";
-import { NewService } from "../components/Modal";
-import Button from "../components/Button";
+import { CreateNewServiceModal } from "../components/Modal";
+import { Button } from "../components/Button";
 import { GoBack } from "../components/GoBack";
 import { useGetAllCategoriesQuery } from "../redux/categories/categoriesSlice";
 import { useGetAllServicesByCategoryIdQuery } from "../redux/services/servicesSlice";
@@ -48,7 +48,7 @@ export const Price = () => {
         />
       </div>
       {isOpen && (
-        <NewService
+        <CreateNewServiceModal
           toggle={showMenu}
           categoryId={currentCategory}
           closeModal={closeModal}

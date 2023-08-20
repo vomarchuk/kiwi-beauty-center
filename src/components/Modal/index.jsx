@@ -1,2 +1,2 @@
 export { default } from "./Login";
-export { NewService } from "./NewService";
+export { CreateNewServiceModal } from "./CreateNewServiceModal";

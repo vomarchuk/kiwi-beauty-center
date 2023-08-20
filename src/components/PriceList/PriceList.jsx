@@ -9,8 +9,8 @@ import {
   Paper,
   styled,
 } from "@mui/material";
-import { useDeleteServiceMutation } from "../../redux/services/servicesSlice";
 import { COLORS } from "../../Constants";
+import { PriceItem } from "../PriceItem";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -22,19 +22,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   },
 }));
 
-const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  "&:nth-of-type(odd)": {
-    backgroundColor: theme.palette.action.hover,
-  },
-  // hide last border
-  "&:last-child td, &:last-child th": {
-    border: 0,
-  },
-}));
-
 const PriceList = ({ services }) => {
-  const [deleteService, { isLoading: isDeleting }] = useDeleteServiceMutation();
-
   return (
     <TableContainer component={Paper} sx={{ mt: "30px" }}>
       <Table>
@@ -53,27 +41,7 @@ const PriceList = ({ services }) => {
         <TableBody>
           {services &&
             services.map((service) => (
-              <StyledTableRow
-                key={service["_id"]}
-                sx={{
-                  "&:last-child td, &:last-child th": {
-                    border: 0,
-                  },
-                }}
-              >
-                <TableCell>{service.name}</TableCell>
-                <TableCell sx={{ textAlign: "right" }}>
-                  {service.price.woman.cost} zł
-                </TableCell>
-                <TableCell sx={{ textAlign: "right" }}>
-                  {service.price.woman.costByCard} zł
-                </TableCell>
-                <TableCell sx={{ textAlign: "right" }}>
-                  <button onClick={() => deleteService(service._id)}>
-                    {isDeleting ? "Deleting" : "Delete"}
-                  </button>
-                </TableCell>
-              </StyledTableRow>
+              <PriceItem key={service._id} {...service} />
             ))}
         </TableBody>
       </Table>

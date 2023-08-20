@@ -1,23 +1,19 @@
-import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
-import { servicesOperations } from "../../redux/services";
+import { useAddServiceMutation } from "../../redux/services/servicesSlice";
 import { Input } from "../Input";
-import Button from "../Button";
-
+import { Button } from "../Button";
 import s from "./Modals.module.scss";
 
-export const NewService = ({ toggle, categoryId, closeModal }) => {
+export const CreateNewServiceModal = ({ toggle, categoryId, closeModal }) => {
   const { register, handleSubmit, reset } = useForm();
-
-  const dispatch = useDispatch();
+  const [addService] = useAddServiceMutation();
 
   const onSubmit = (data) => {
     const newService = {
       categoryId: categoryId["_id"],
       newService: data,
     };
-    console.log(newService);
-    // dispatch(servicesOperations.addServiceByCategory(newService));
+    addService(newService);
     reset();
     closeModal();
   };

@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Roboto:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;800&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: default;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+} /*# sourceMappingURL=base.css.map */

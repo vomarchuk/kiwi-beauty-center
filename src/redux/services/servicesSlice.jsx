@@ -1,6 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
 import { DEFAULT_URL } from "../../Constants";
-import { NewService } from "../../components/Modal";
 
 export const servicesAPI = createApi({
   reducerPath: "servicesAPI",
@@ -12,11 +11,14 @@ export const servicesAPI = createApi({
       providesTags: ["Service"],
     }),
     addService: builder.mutation({
-      query: (categoryId) => ({
+      method: "POST",
+      query: ({ categoryId, newService }) => ({
         url: `services/${categoryId}`,
         method: "POST",
-        body: NewService,
+        body: newService,
+        providesTags: ["Service"],
       }),
+      invalidatesTags: ["Service"],
     }),
     deleteService: builder.mutation({
       query: (servicesId) => ({
@@ -32,9 +34,3 @@ export const {
   useAddServiceMutation,
   useDeleteServiceMutation,
 } = servicesAPI;
-
-// router.delete(
-//   '/:serviceId',
-//   auth,
-//   controllerWrapper(serviceCtrl.removeService)
-// );
