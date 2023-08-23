@@ -22,7 +22,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   },
 }));
 
-const PriceList = ({ services }) => {
+export const PriceList = ({ services }) => {
   return (
     <>
       <TableContainer component={Paper} sx={{ mt: "30px" }}>
@@ -52,5 +52,3 @@ const PriceList = ({ services }) => {
     </>
   );
 };
-
-export default PriceList;

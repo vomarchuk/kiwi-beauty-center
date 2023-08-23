@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Container from "../components/Container";
-import PriceList from "../components/PriceList";
+import { PriceList } from "../components/PriceList";
 import { CreateNewServiceModal } from "../components/Modal";
 import { Button } from "../components/Button";
 import { GoBack } from "../components/GoBack";

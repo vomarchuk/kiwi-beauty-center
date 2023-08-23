@@ -1,21 +1,18 @@
-import React, { Suspense } from "react";
+import { Suspense, StrictMode } from "react";
 import ReactDOM from "react-dom";
+import { App } from "./App";
 import { Provider } from "react-redux";
-import { persistor, store } from "./redux";
-// import { PersistGate } from 'redux-persist/integration/react';
-import App from "./App";
+import { store } from "./redux";
 
 import "./styles/base.scss";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <StrictMode>
     <Provider store={store}>
-      {/* <PersistGate loading={null} persistor={persistor}> */}
       <Suspense fallback="loading...">
         <App />
       </Suspense>
-      {/* </PersistGate> */}
     </Provider>
-  </React.StrictMode>,
+  </StrictMode>,
   document.getElementById("root")
 );

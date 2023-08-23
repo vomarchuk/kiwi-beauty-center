@@ -6,7 +6,7 @@ import { useGetAllCategoriesQuery } from "../redux/categories/categoriesSlice";
 const HomePage = lazy(() => import("../pages"));
 const Footer = lazy(() => import("../components/Footer"));
 
-function App() {
+export function App() {
   useGetAllCategoriesQuery();
   return (
     <BrowserRouter>
@@ -19,5 +19,3 @@ function App() {
     </BrowserRouter>
   );
 }
-
-export default App;
