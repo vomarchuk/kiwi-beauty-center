@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { persistor, store } from "./redux";
-import { PersistGate } from "redux-persist/integration/react";
+// import { PersistGate } from 'redux-persist/integration/react';
 import App from "./App";
 
 import "./styles/base.scss";
