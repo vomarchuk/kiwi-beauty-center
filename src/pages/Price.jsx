@@ -7,13 +7,14 @@ import { Button } from "../components/Button";
 import { GoBack } from "../components/GoBack";
 import { useGetAllCategoriesQuery } from "../redux/categories/categoriesSlice";
 import { useGetAllServicesByCategoryIdQuery } from "../redux/services/servicesSlice";
+
 export const Price = () => {
   const [isOpen, setOpen] = useState(false);
   const { category } = useParams();
   let currentCategory = "";
 
   const { data, isLoading } = useGetAllCategoriesQuery();
-  const categories = data?.data;
+  const categories = data;
 
   if (!isLoading) {
     currentCategory = categories.find((c) => c.category === category);
@@ -38,7 +39,7 @@ export const Price = () => {
       <div style={{ color: "black", paddingTop: "20px" }}>
         <GoBack />
         {servicesData && !isFetching && (
-          <PriceList services={servicesData.data} name={category} />
+          <PriceList services={servicesData} name={category} />
         )}
         <Button
           name="ADD new service"

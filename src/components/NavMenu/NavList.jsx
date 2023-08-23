@@ -1,11 +1,10 @@
-// import { useSelector } from 'react-redux';
 import { useGetAllCategoriesQuery } from "../../redux/categories/categoriesSlice";
 import Logo from "../Logo";
 import style from "./NavMenu.module.scss";
 const NavList = ({ toggle }) => {
   const { data, isFetching } = useGetAllCategoriesQuery();
-  console.log(isFetching);
-  const categoriesNew = data?.data;
+  const categoriesNew = data;
+  // console.log(isFetching);
 
   return (
     <div className={style.nav} onClick={toggle}>

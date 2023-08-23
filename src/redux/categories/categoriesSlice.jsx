@@ -24,9 +24,12 @@ import { DEFAULT_URL } from "../../Constants";
 export const categoriesAPI = createApi({
   reducerPath: "categoriesAPI",
   baseQuery: fetchBaseQuery({ baseUrl: DEFAULT_URL }),
+  tagTypes: ["Category"],
   endpoints: (builder) => ({
     getAllCategories: builder.query({
       query: () => `category`,
+      transformResponse: (response) => response.data,
+      providesTags: ["Category"],
     }),
   }),
 });

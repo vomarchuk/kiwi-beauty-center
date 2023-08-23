@@ -1,6 +1,6 @@
 import { lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Price, ServiceSetup } from "../pages";
+import { Price } from "../pages";
 import { useGetAllCategoriesQuery } from "../redux/categories/categoriesSlice";
 
 const HomePage = lazy(() => import("../pages"));
@@ -12,7 +12,6 @@ export function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/Service Setup" element={<ServiceSetup />} />
         <Route path="/:category" element={<Price />} />
       </Routes>
       <Footer />

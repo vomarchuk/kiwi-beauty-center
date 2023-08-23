@@ -29,8 +29,9 @@ export const PriceItem = ({ _id: id, name, price }) => {
         {price.woman.costByCard} zł
       </TableCell>
       <TableCell sx={{ textAlign: "right" }}>
+        <button onClick={() => console.log("update")}>update</button>
         <button onClick={() => deleteService(id)} disabled={isDeleting}>
-          {isDeleting ? "Deleting" : "Delete"}
+          Delete
         </button>
       </TableCell>
     </StyledTableRow>

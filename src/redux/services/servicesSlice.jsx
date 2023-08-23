@@ -8,6 +8,7 @@ export const servicesAPI = createApi({
   endpoints: (builder) => ({
     getAllServicesByCategoryId: builder.query({
       query: (categoryId) => `services/${categoryId}`,
+      transformResponse: (response) => response.data,
       providesTags: ["Service"],
     }),
     addService: builder.mutation({
