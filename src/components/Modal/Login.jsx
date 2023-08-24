@@ -1,8 +1,10 @@
+import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Button } from "../Button";
 import s from "./Modals.module.scss";
-
+import authOperations from "../../redux/auth/authOperations";
 const Login = ({ toggle }) => {
+  const dispatch = useDispatch();
   const {
     register,
     handleSubmit,
@@ -13,7 +15,7 @@ const Login = ({ toggle }) => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    dispatch(authOperations.logIn(data));
     reset();
   };
   return (

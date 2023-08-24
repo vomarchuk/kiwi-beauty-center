@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 import Container from "../components/Container";
 import { PriceList } from "../components/PriceList";
 import { CreateNewServiceModal } from "../components/Modal";
@@ -7,8 +8,9 @@ import { Button } from "../components/Button";
 import { GoBack } from "../components/GoBack";
 import { useGetAllCategoriesQuery } from "../redux/categories/categoriesSlice";
 import { useGetAllServicesByCategoryIdQuery } from "../redux/services/servicesSlice";
-
+import authSelectors from "../redux/auth/authSelectors";
 export const Price = () => {
+  const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
   const [isOpen, setOpen] = useState(false);
   const { category } = useParams();
   let currentCategory = "";
@@ -41,12 +43,14 @@ export const Price = () => {
         {servicesData && !isFetching && (
           <PriceList services={servicesData} name={category} />
         )}
-        <Button
-          name="ADD new service"
-          typeBtn="button"
-          variant="add_new_service"
-          onClick={showMenu}
-        />
+        {isLoggedIn && (
+          <Button
+            name="ADD new service"
+            typeBtn="button"
+            variant="add_new_service"
+            onClick={showMenu}
+          />
+        )}
       </div>
       {isOpen && (
         <CreateNewServiceModal

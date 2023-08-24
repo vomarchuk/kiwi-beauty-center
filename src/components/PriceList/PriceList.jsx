@@ -9,6 +9,8 @@ import {
   Paper,
   styled,
 } from "@mui/material";
+import { useSelector } from "react-redux";
+import authSelectors from "../../redux/auth/authSelectors";
 import { COLORS } from "../../Constants";
 import { PriceItem } from "../PriceItem/PriceItem";
 
@@ -23,6 +25,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 }));
 
 export const PriceList = ({ services }) => {
+  const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
   return (
     <>
       <TableContainer component={Paper} sx={{ mt: "30px" }}>
@@ -36,9 +39,11 @@ export const PriceList = ({ services }) => {
               <StyledTableCell sx={{ textAlign: "right" }}>
                 Cena z kartą Kiwi Beauty Center
               </StyledTableCell>
-              <StyledTableCell sx={{ textAlign: "right" }}>
-                edit
-              </StyledTableCell>
+              {isLoggedIn && (
+                <StyledTableCell sx={{ textAlign: "right" }}>
+                  edit
+                </StyledTableCell>
+              )}
             </TableRow>
           </TableHead>
           <TableBody>
