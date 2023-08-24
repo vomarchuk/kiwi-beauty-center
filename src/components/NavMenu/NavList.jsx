@@ -2,7 +2,7 @@ import { useGetAllCategoriesQuery } from "../../redux/categories/categoriesSlice
 import Logo from "../Logo";
 import style from "./NavMenu.module.scss";
 const NavList = ({ toggle }) => {
-  const { data, isFetching } = useGetAllCategoriesQuery();
+  const { data } = useGetAllCategoriesQuery();
   const categoriesNew = data;
   // console.log(isFetching);
 
