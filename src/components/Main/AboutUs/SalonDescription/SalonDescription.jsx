@@ -1,24 +1,12 @@
-import { useState } from "react";
-import Login from "../../../Modal/Login";
-
 import s from "./SalonDescription.module.scss";
 
 const SalonDescription = () => {
-  const [isOpen, setOpen] = useState(false);
-
-  const showMenu = (e) => {
-    if (!isOpen) setOpen(true);
-    if (e.target.nodeName === "DIV") setOpen(false);
-  };
   return (
     <div className={s.salonDescription}>
       <h2 className={s.salonDescription__title}>
-        <span className={s.accent} onClick={showMenu}>
-          Salon
-        </span>
+        <span className={s.accent}>Salon</span>
         kosmetyczny
       </h2>
-      {isOpen && <Login toggle={showMenu} />}
       <p className={s.salonDescription__text}>
         Szanowni Państwo! Witamy serdecznie w naszym nowoczesnym
         <span className={s.accent}> Kiwi beauty center.</span> Piękne wnętrze,

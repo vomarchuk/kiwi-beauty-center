@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import { store, persistor } from "./redux";
 import { PersistGate } from "redux-persist/integration/react";
 
+import "./index.css";
 import "./styles/base.scss";
 import { Loader } from "./components/Loader/Loader";
 

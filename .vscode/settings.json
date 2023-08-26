@@ -1,9 +1,10 @@
 {
-  "cSpell.language": "en,pl",
+    "cSpell.language": "en,pl",
   "cSpell.words": [
     "persistor",
     "reduxjs",
     "signup",
+    "tailwindcss",
     "whilelist"
   ]
 }
