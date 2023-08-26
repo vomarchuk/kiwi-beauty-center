@@ -18,6 +18,16 @@ const authSlice = createSlice({
       state.isLoggedIn = false;
       state.error = error?.message;
     },
+
+    [authOperations.logOut.fulfilled](state) {
+      state.token = null;
+      state.isLoggedIn = false;
+      state.error = null;
+    },
+    [authOperations.logOut.rejected](state, { error }) {
+      state.isLoggedIn = true;
+      state.message = error?.message;
+    },
   },
 });
 
