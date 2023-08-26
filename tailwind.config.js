@@ -33,9 +33,15 @@ module.exports = {
     },
     spacing: {
       0: "0",
-
+      5: "5px",
       10: "10px",
       20: "20px",
+      30: "30px",
+      200: "200px",
+      300: "300px",
+    },
+    minWidth: {
+      300: "300px",
     },
     extend: {},
   },

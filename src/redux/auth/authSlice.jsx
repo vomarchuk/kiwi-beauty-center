@@ -25,7 +25,6 @@ const authSlice = createSlice({
       state.error = null;
     },
     [authOperations.logOut.rejected](state, { error }) {
-      state.isLoggedIn = true;
       state.message = error?.message;
     },
   },

@@ -10,36 +10,6 @@
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.loginForm {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.input {
-  min-width: 300px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  outline: none;
-  border: 1px solid #54c263;
-}
-
-.input:not(first-child) {
-  margin-top: 10px;
-}
-
-.notification--error {
-  margin-top: 10px;
-  color: #bf1650;
-}
-
-.notification--error::before {
-  content: "⚠ ";
-}
-
 //modal add new service
 
 .add_service_form {

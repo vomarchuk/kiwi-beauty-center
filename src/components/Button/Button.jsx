@@ -1,8 +1,7 @@
-import s from "./Button.module.scss";
-export const Button = ({ name, variant, typeBtn, onClick }) => {
+export const Button = ({ name, className, typeBtn, onClick }) => {
   return (
     <button
-      className={`${s["button"]}  ${s[variant]}`}
+      className={`inline-block max-w-300 py-[12px] px-[30px] bg-accentColor rounded-[5px] text-[13px] font-bold uppercase tracking-[3px] text-textColor duration-500 hover:bg-opacity-50 active:bg-opacity-100 active:text-dark ${className}`}
       type={typeBtn}
       onClick={onClick}
     >

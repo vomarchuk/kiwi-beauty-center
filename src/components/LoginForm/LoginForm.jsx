@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import authOperations from "../../redux/auth/authOperations";
 import { Button } from "../Button";
-import s from "../Modal/Modals.module.scss";
 
 export const LoginForm = () => {
   const {
@@ -21,16 +20,18 @@ export const LoginForm = () => {
   };
 
   return (
-    // <div style={{ marginTop: '50px' }}>
-    <div className="mt-10">
-      <form className={s.loginForm} onSubmit={handleSubmit(onSubmit)}>
+    <div>
+      <form
+        className="flex flex-col items-center"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <input
-          className={s.input}
+          className="w-[300px] py-[5px] px-[10px] outline-0 border-accentColor border rounded-[5px]"
           placeholder="e-mail"
           {...register("email", { required: true })}
         />
         <input
-          className={s.input}
+          className="w-[300px] mt-10 py-[5px] px-[10px] outline-0 border-accentColor border rounded-[5px]"
           type="password"
           autoComplete="off"
           placeholder="password"
@@ -43,9 +44,11 @@ export const LoginForm = () => {
           })}
         />
         {errors.password && (
-          <p className={s["notification--error"]}>{errors.password.message}</p>
+          <p className="mt-10 text-red before:content-['⚠']">
+            {errors.password.message}
+          </p>
         )}
-        <Button name="LogIn" variant="logIn" typeBtn="submit" />
+        <Button name="LogIn" className="mt-10 w-300" typeBtn="submit" />
       </form>
     </div>
   );

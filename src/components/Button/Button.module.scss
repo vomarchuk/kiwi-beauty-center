@@ -1,66 +1,9 @@
 @import "../../styles/shared.scss";
 
-.button {
-  display: inline-block;
-  padding: 12px 30px;
-  font-family: "Raleway", sans-serif;
-  border: none;
-  font-size: 13px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  border-radius: 2px;
-  transition: background-color 0.1s ease;
-  transition-timing-function: ease;
-  transition-duration: 0.5s;
-  cursor: pointer;
-}
-
-.reservation {
-  position: absolute;
-  background-color: $accentColor;
-  color: #ffffff;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-
-  &:hover {
-    background-color: lighten($accentColor, 35%);
-    color: $accentColor;
-  }
-
-  &:active {
-    background-color: darken($accentColor, 5%);
-  }
-}
-
-.logIn {
-  margin-top: 10px;
-  background-color: $accentColor;
-  color: #ffffff;
-
-  &:hover {
-    background-color: lighten($accentColor, 35%);
-    color: $accentColor;
-  }
-
-  &:active {
-    background-color: darken($accentColor, 5%);
-  }
-}
-
 .more--service {
   margin-top: 20px;
   color: #444444;
   background-color: #fff;
-
-  &:hover {
-    background-color: lighten($accentColor, 35%);
-  }
-
-  &:active {
-    background-color: darken($accentColor, 5%);
-  }
 }
 
 .add_new_service {
