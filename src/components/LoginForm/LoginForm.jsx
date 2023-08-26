@@ -22,7 +22,7 @@ export const LoginForm = () => {
   return (
     <>
       <form
-        className="flex flex-col items-center"
+        className="flex flex-col items-center my-300"
         onSubmit={handleSubmit(onSubmit)}
       >
         <input
