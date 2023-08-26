@@ -22,7 +22,7 @@ export const LoginForm = () => {
 
   return (
     // <div style={{ marginTop: '50px' }}>
-    <div className="mt-5 ">
+    <div className="mt-10">
       <form className={s.loginForm} onSubmit={handleSubmit(onSubmit)}>
         <input
           className={s.input}

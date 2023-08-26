@@ -31,6 +31,12 @@ module.exports = {
       desktopLarge: "1440px",
       desktop4k: "2560px",
     },
+    spacing: {
+      0: "0",
+
+      10: "10px",
+      20: "20px",
+    },
     extend: {},
   },
   plugins: [],
