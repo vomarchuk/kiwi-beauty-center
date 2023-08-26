@@ -20,7 +20,7 @@ export const LoginForm = () => {
   };
 
   return (
-    <div>
+    <>
       <form
         className="flex flex-col items-center"
         onSubmit={handleSubmit(onSubmit)}
@@ -50,6 +50,6 @@ export const LoginForm = () => {
         )}
         <Button name="LogIn" className="mt-10 w-300" typeBtn="submit" />
       </form>
-    </div>
+    </>
   );
 };

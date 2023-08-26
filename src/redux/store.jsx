@@ -18,7 +18,7 @@ import authSlice from "./auth/authSlice";
 const authPersistConfig = {
   key: "auth",
   storage,
-  whilelist: ["token"],
+  whitelist: ["token"],
 };
 
 export const store = configureStore({

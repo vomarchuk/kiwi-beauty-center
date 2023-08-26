@@ -27,6 +27,9 @@ const authSlice = createSlice({
     [authOperations.logOut.rejected](state, { error }) {
       state.message = error?.message;
     },
+    [authOperations.fetchCurrentUser.fulfilled](state, { payload }) {
+      state.isLoggedIn = true;
+    },
   },
 });
 

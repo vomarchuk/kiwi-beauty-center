@@ -1,6 +1,7 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { DEFAULT_URL } from "../../Constants";
+
 axios.defaults.baseURL = DEFAULT_URL;
 const token = {
   set(token) {
@@ -10,26 +11,24 @@ const token = {
     axios.defaults.headers.common.Authorization = "";
   },
 };
-
-// const fetchCurrentUser = createAsyncThunk(
-//   '/auth/refresh',
-//   async (_, thunkAPI) => {
-//     const state = thunkAPI.getState();
-//     const persisterToken = state.auth.token;
-//     if (persisterToken === null) {
-//       return thunkAPI.rejectedWithValue();
-//       // return state!;
-//     }
-//     token.set(persisterToken);
-//     try {
-//       const { data } = await axios.get('/users/current');
-//       return data;
-//     } catch (error) {
-//       throw error;
-//     }
-//   }
-// );
-
+const fetchCurrentUser = createAsyncThunk(
+  "/auth/refresh",
+  async (_, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const persisterToken = state.auth.token;
+    if (persisterToken === null) {
+      return thunkAPI.rejectedWithValue();
+      // return state!;
+    }
+    token.set(persisterToken);
+    try {
+      const { data } = await axios.get("/users/current");
+      return data;
+    } catch (error) {
+      throw error;
+    }
+  }
+);
 const logIn = createAsyncThunk("auth/login", async (credentials) => {
   try {
     const { data } = await axios.post("/auth/login", credentials);
@@ -52,6 +51,6 @@ const logOut = createAsyncThunk("auth/logout", async () => {
 const authOperations = {
   logIn,
   logOut,
-  // fetchCurrentUser,
+  fetchCurrentUser,
 };
 export default authOperations;
