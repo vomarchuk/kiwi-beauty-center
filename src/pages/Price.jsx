@@ -38,7 +38,7 @@ export const Price = () => {
 
   return (
     <Container>
-      <div style={{ color: "black", paddingTop: "20px" }}>
+      <div className="pt-20">
         <GoBack />
         {servicesData && !isFetching && (
           <PriceList services={servicesData} name={category} />

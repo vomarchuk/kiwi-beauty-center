@@ -7,15 +7,11 @@ import Hero from "./Hero";
 import Logo from "../Logo";
 import { WrapperLink } from "../../wrappers";
 import { LINKS } from "../../Constants";
-
-// import Login from '../Modal';
-
 const { RESERVATION_ONLINE } = LINKS;
 
 const Header = () => {
   return (
     <header className={s.header}>
-      {/* <Login /> */}
       <Logo styles="header" />
       <NavMenu />
       <Hero />
