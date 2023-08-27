@@ -11,7 +11,19 @@ import { useGetAllServicesByCategoryIdQuery } from "../redux/services/servicesSl
 const TestComponent = ({ categoryId }) => {
   const { data, isLoading } = useGetAllServicesByCategoryIdQuery(categoryId);
   console.log(data);
-  return <ul>{data && data.map((item) => <li>{item.name}</li>)}</ul>;
+  const manCervice = data.filter((item) => item.price.man);
+  return (
+    <ul>
+      {data &&
+        data.map((item) => (
+          <li>
+            <h3>{item.name}</h3>
+            {item.price.woman && <p className="bg-red">man</p>}
+            {item.price.man && <p className="bg-blue">man</p>}
+          </li>
+        ))}
+    </ul>
+  );
 };
 
 export const AdminPanel = () => {
@@ -29,7 +41,7 @@ export const AdminPanel = () => {
 
       {(isLoggedIn && (
         <>
-          <div className="flex border p-10">
+          {/* <div className="flex border p-10">
             <p>Admin panel</p>
             <ul className="flex">
               <li>Usługi</li>
@@ -42,14 +54,14 @@ export const AdminPanel = () => {
             <button className="border p-1" onClick={logOutUser}>
               logout
             </button>
-          </div>
+          </div> */}
           <Container>
             <ul>
               {allCategories &&
                 allCategories.map(({ category, _id: categoryId }) => {
                   return (
-                    <li key={categoryId}>
-                      <p>{category}</p>
+                    <li key={categoryId} className="border">
+                      <h2 className="bg-accentColor text-center">{category}</h2>
                       {categoryId && <TestComponent categoryId={categoryId} />}
                     </li>
                   );
