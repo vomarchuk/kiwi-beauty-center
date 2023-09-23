@@ -82,7 +82,7 @@ export const AdminPanel = () => {
 
       {(isLoggedIn && (
         <>
-          {/* <div className="flex border p-10">
+          <div className="flex border p-10">
             <p>Admin panel</p>
             <ul className="flex">
               <li>Usługi</li>
@@ -95,7 +95,7 @@ export const AdminPanel = () => {
             <button className="border p-1" onClick={logOutUser}>
               logout
             </button>
-          </div> */}
+          </div>
           <Container>
             <ul>
               {!isLoadingAllCategory &&
