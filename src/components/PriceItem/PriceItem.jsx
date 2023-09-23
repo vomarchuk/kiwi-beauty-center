@@ -1,36 +1,18 @@
 import React from "react";
 import { useSelector } from "react-redux";
-
-import { styled, TableCell, TableRow } from "@mui/material";
+import { TableCell } from "@mui/material";
 import { useDeleteServiceMutation } from "../../redux/services/servicesSlice";
 import authSelectors from "../../redux/auth/authSelectors";
-const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  "&:nth-of-type(odd)": {
-    backgroundColor: theme.palette.action.hover,
-  },
-  // hide last border
-  "&:last-child td, &:last-child th": {
-    border: 0,
-  },
-}));
+import { StyledTableRow } from "../../helpers";
 
-export const PriceItem = ({ _id: id, name, price }) => {
+export const PriceItem = ({ id, name, cost, costByCard }) => {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
   const [deleteService, { isLoading: isDeleting }] = useDeleteServiceMutation();
-
   return (
-    <StyledTableRow
-      sx={{
-        "&:last-child td, &:last-child th": {
-          border: 0,
-        },
-      }}
-    >
+    <StyledTableRow>
       <TableCell>{name}</TableCell>
-      <TableCell sx={{ textAlign: "right" }}>{price.woman.cost} zł</TableCell>
-      <TableCell sx={{ textAlign: "right" }}>
-        {price.woman.costByCard} zł
-      </TableCell>
+      <TableCell sx={{ textAlign: "right" }}>{costByCard} zł</TableCell>
+      <TableCell sx={{ textAlign: "right" }}>{cost} zł</TableCell>
       {isLoggedIn && (
         <TableCell sx={{ textAlign: "right" }}>
           <button onClick={() => console.log("update")}>update</button>

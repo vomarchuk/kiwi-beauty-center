@@ -9,6 +9,12 @@ export const CreateNewServiceModal = ({ toggle, categoryId, closeModal }) => {
   const [addService] = useAddServiceMutation();
 
   const onSubmit = (data) => {
+    const price = data.price;
+    if (price.man.cost === "") price.man.cost = null;
+    if (price.man.costByCard === "") price.man.costByCard = null;
+    if (price.woman.cost === "") price.woman.cost = null;
+    if (price.woman.costByCard === "") price.woman.costByCard = null;
+
     const newService = {
       categoryId: categoryId["_id"],
       newService: data,

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Container from "../components/Container";
@@ -9,39 +9,45 @@ import { GoBack } from "../components/GoBack";
 import { useGetAllCategoriesQuery } from "../redux/categories/categoriesSlice";
 import { useGetAllServicesByCategoryIdQuery } from "../redux/services/servicesSlice";
 import authSelectors from "../redux/auth/authSelectors";
+import { getPricePerGender2 } from "../helpers";
+
 export const Price = () => {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
   const [isOpen, setOpen] = useState(false);
+  const [serviceByGender, setServiceByGender] = useState();
   const { category } = useParams();
   let currentCategory = "";
 
-  const { data, isLoading } = useGetAllCategoriesQuery();
-  const categories = data;
-
+  const { data: categories, isLoading } = useGetAllCategoriesQuery();
   if (!isLoading) {
     currentCategory = categories.find((c) => c.category === category);
   }
-
   const { data: servicesData, isFetching } = useGetAllServicesByCategoryIdQuery(
     currentCategory._id,
     {
       skip: currentCategory === "",
     }
   );
+  useEffect(() => {
+    if (servicesData) {
+      setServiceByGender(getPricePerGender2(servicesData));
+    }
+  }, [isFetching, servicesData]);
 
   const showMenu = (e) => {
     if (!isOpen) setOpen(true);
     if (e.target.nodeName === "DIV") setOpen(false);
   };
-
   const closeModal = () => setOpen(false);
-
   return (
     <Container>
       <div className="pt-20">
         <GoBack />
-        {servicesData && !isFetching && (
-          <PriceList services={servicesData} name={category} />
+        {serviceByGender && (
+          <>
+            <PriceList services={serviceByGender.woman} name={category} />
+            <PriceList services={serviceByGender.man} name={category} />
+          </>
         )}
         {isLoggedIn && (
           <Button

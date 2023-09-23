@@ -6,7 +6,12 @@ export const GoBack = () => {
   const navigate = useNavigate();
   const goBack = () => navigate("/", { replace: true });
   return (
-    <button type="button" onClick={goBack} className={s.btn}>
+    <button
+      type="button"
+      onClick={goBack}
+      className={s.btn}
+      aria-label="button go back"
+    >
       <Back />
     </button>
   );

@@ -1,3 +1,12 @@
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+} from "@mui/material";
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Container from "../components/Container";
@@ -6,26 +15,58 @@ import { LoginForm } from "../components/LoginForm";
 import authSelectors from "../redux/auth/authSelectors";
 import authOperations from "../redux/auth/authOperations";
 import { useGetAllCategoriesQuery } from "../redux/categories/categoriesSlice";
-import { useGetAllServicesByCategoryIdQuery } from "../redux/services/servicesSlice";
+import {
+  // useDeleteServiceMutation,
+  useGetAllServicesByCategoryIdQuery,
+} from "../redux/services/servicesSlice";
+import { StyledTableCell, StyledTableRow, getPricePerGender } from "../helpers";
 
 const TestComponent = ({ categoryId }) => {
   const { data, isLoading } = useGetAllServicesByCategoryIdQuery(categoryId);
-  console.log(data);
-  const manCervice = data.filter((item) => item.price.man);
-  return (
-    <ul>
-      {data &&
-        data.map((item) => (
-          <li>
-            <h3>{item.name}</h3>
-            {item.price.woman && <p className="bg-red">man</p>}
-            {item.price.man && <p className="bg-blue">man</p>}
-          </li>
-        ))}
-    </ul>
-  );
-};
 
+  if (!isLoading) {
+    const man = getPricePerGender("man", data);
+    const woman = getPricePerGender("woman", data);
+    console.log(man);
+    return (
+      <>
+        {man &&
+          man.map(({ _id, name, gender, cost, costByCard }) => (
+            <StyledTableRow key={_id}>
+              <TableCell>
+                {gender} {name}
+              </TableCell>
+              <TableCell sx={{ textAlign: "right" }}>{cost} zł</TableCell>
+              <TableCell sx={{ textAlign: "right" }}>{costByCard} zł</TableCell>
+              <TableCell sx={{ textAlign: "right" }}>
+                <button onClick={() => console.log("update")}>update</button>
+                <button onClick={() => console.log("click")}>
+                  {/* Delete */}
+                </button>
+              </TableCell>
+            </StyledTableRow>
+          ))}
+        {woman &&
+          woman.map(({ _id, name, gender, cost, costByCard }) => (
+            <StyledTableRow key={_id}>
+              <TableCell>
+                {gender} {name}
+              </TableCell>
+              <TableCell sx={{ textAlign: "right" }}>{cost} zł</TableCell>
+              <TableCell sx={{ textAlign: "right" }}>{costByCard} zł</TableCell>
+              <TableCell sx={{ textAlign: "right" }}>
+                <button onClick={() => console.log("update")}>update</button>
+                <button onClick={() => console.log("click")}>
+                  {/* Delete */}
+                </button>
+              </TableCell>
+            </StyledTableRow>
+          ))}
+      </>
+    );
+  }
+  return <TableCell>Hello</TableCell>;
+};
 export const AdminPanel = () => {
   const dispatch = useDispatch();
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
@@ -57,12 +98,32 @@ export const AdminPanel = () => {
           </div> */}
           <Container>
             <ul>
-              {allCategories &&
+              {!isLoadingAllCategory &&
                 allCategories.map(({ category, _id: categoryId }) => {
                   return (
-                    <li key={categoryId} className="border">
+                    <li key={categoryId} className="text-black">
                       <h2 className="bg-accentColor text-center">{category}</h2>
-                      {categoryId && <TestComponent categoryId={categoryId} />}
+                      <TableContainer component={Paper} sx={{ mt: "30px" }}>
+                        <Table>
+                          <TableHead>
+                            <TableRow>
+                              <StyledTableCell>Zabieg</StyledTableCell>
+                              <StyledTableCell sx={{ textAlign: "right" }}>
+                                Cena standard
+                              </StyledTableCell>
+                              <StyledTableCell sx={{ textAlign: "right" }}>
+                                Cena z kartą Kiwi Beauty Center
+                              </StyledTableCell>
+                              <StyledTableCell sx={{ textAlign: "right" }}>
+                                edit
+                              </StyledTableCell>
+                            </TableRow>
+                          </TableHead>
+                          <TableBody>
+                            <TestComponent categoryId={categoryId} />
+                          </TableBody>
+                        </Table>
+                      </TableContainer>
                     </li>
                   );
                 })}
