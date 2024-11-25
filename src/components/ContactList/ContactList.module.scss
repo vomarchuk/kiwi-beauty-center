@@ -22,7 +22,7 @@
     font-weight: bold;
   }
 
-  &__phone > a {
+  &__phone>a {
     display: flex;
     align-items: center;
     transition-timing-function: ease;
@@ -63,8 +63,6 @@
     border-top: rgba(#fff, 0.15) 1px solid;
   }
 
-  &--footer {
-  }
 
   @media screen and (min-width: $tablet) {
     max-width: $tablet;

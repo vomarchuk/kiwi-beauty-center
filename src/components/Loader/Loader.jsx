@@ -1,13 +1,13 @@
-import ClipLoader from "react-spinners/ClipLoader";
+import ClipLoader from 'react-spinners/ClipLoader'
 
 const override = {
-  display: "block",
-  margin: "0 auto",
-  borderColor: "red",
-};
+  display: 'block',
+  margin: '0 auto',
+  borderColor: 'red',
+}
 
 export const Loader = () => {
-  const color = "#ffffff";
+  const color = '#ffffff'
 
   return (
     <ClipLoader
@@ -18,5 +18,5 @@ export const Loader = () => {
       aria-label="Loading Spinner"
       data-testid="loader"
     />
-  );
-};
+  )
+}
